@@ -30,6 +30,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{fe900137-3fdc-4666-8389-5c842bb21f45}</destination>
+			<destination>{00a96e7b-7b91-4be5-974f-d8e23ee18608}</destination>
 		</relationship>
 		<relationship name="banks">
 			<destination>{313701e3-33d0-43b0-9b8f-c9c335c7d108}</destination>
@@ -56,22 +57,26 @@
 			<destination>{8e8e299d-4bcd-400c-82ca-a84625a250a5}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{646aa2c1-2ab7-4139-87e0-473233e664e5}</destination>
+			<destination>{13b74cbf-fdd0-4f95-853e-39df7eb63227}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{55f87a61-84bd-4909-9ae1-c05447b3613a}" />
 	<object class="MarkerTrack" id="{77dc8efd-5757-4f50-a6a0-ec9b2f63639a}" />
-	<object class="Timeline" id="{256f6fec-f097-46fb-96b1-3782f050ac8a}">
-		<property name="isProxyEnabled">
-			<value>false</value>
-		</property>
-	</object>
+	<object class="Timeline" id="{256f6fec-f097-46fb-96b1-3782f050ac8a}" />
 	<object class="ActionSheet" id="{fe900137-3fdc-4666-8389-5c842bb21f45}">
 		<relationship name="modules">
 			<destination>{5d21f524-0510-4238-a181-00ab82427529}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProxy" id="{00a96e7b-7b91-4be5-974f-d8e23ee18608}">
+		<relationship name="preset">
+			<destination>{5141861b-de4c-42cb-a86f-29ab05999985}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{a6d3054a-a342-4f48-ab8d-bd486566e748}">
+		<property name="volume">
+			<value>-7.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{4920e4e8-bb63-450c-9ad0-ab55394ea680}</destination>
 		</relationship>

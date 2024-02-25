@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6531786311941195201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jump/ZoneDistance
+  m_EditorClassIdentifier: 
+  Name: ZoneDistance
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1322221732
+    data2: 3566883721
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5530414666821635611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23,7 +47,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -6531786311941195201}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -44,12 +69,13 @@ MonoBehaviour:
   - {fileID: 6193963329065090831}
   EditorEvents:
   - {fileID: -5530414666821635611}
+  - {fileID: 4146957157209017427}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6193963329065090831}
   StringsBanks:
   - {fileID: 2876602958952172030}
-  cacheTime: 638444150679999926
+  cacheTime: 638444812089681215
   cacheVersion: 131616
 --- !u!114 &2876602958952172030
 MonoBehaviour:
@@ -66,11 +92,39 @@ MonoBehaviour:
   Path: ../RetroTestFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638444150679999926
+  lastModified: 638444812089681215
   FileSizes:
   - Name: Desktop
-    Value: 754
+    Value: 926
   Exists: 1
+--- !u!114 &4146957157209017427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  Guid:
+    Data1: 1778695125
+    Data2: 1138889012
+    Data3: -113630833
+    Data4: -1761917835
+  Banks:
+  - {fileID: 6193963329065090831}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6975408742218627942}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 25600
 --- !u!114 &6193963329065090831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,8 +140,32 @@ MonoBehaviour:
   Path: ../RetroTestFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638444150679990108
+  lastModified: 638444812089665030
   FileSizes:
   - Name: Desktop
-    Value: 5984
+    Value: 999104
+  Exists: 1
+--- !u!114 &6975408742218627942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/ZoneDistance
+  m_EditorClassIdentifier: 
+  Name: ZoneDistance
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1322221732
+    data2: 3566883721
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
