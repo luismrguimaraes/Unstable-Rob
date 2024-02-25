@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0e1830e9-9ea2-47d2-9fd8-e004f520b59d}">
+		<property name="assetPath">
+			<value>Bass.flac</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>25.600000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{cd1ef532-5eb8-48d5-a90b-58faea9d194a}</destination>
+		</relationship>
+	</object>
+</objects>
