@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraGlitchEvent : Event {
+    public CameraGlitchEvent()
+    {
+        Id = "CameraGlitch";
+    }
+    
     public override void Initialize()
     {
         data.digitalGlitch.enabled = !data.digitalGlitch.enabled;
