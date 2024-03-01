@@ -19,8 +19,8 @@ namespace GMTK.PlatformerToolkit {
         [SerializeField] private ParticleSystem landParticles;
 
         [Header("Components - Audio")]
-        [SerializeField] AudioSource jumpSFX;
-        [SerializeField] AudioSource landSFX;
+        [SerializeField] FMODUnity.EventReference jumpSFX;
+        [SerializeField] FMODUnity.EventReference landSFX;
 
         [Header("Settings - Squash and Stretch")]
         [SerializeField, Tooltip("Width Squeeze, Height Squeeze, Duration")] Vector3 jumpSquashSettings;
@@ -91,8 +91,9 @@ namespace GMTK.PlatformerToolkit {
                 myAnimator.SetTrigger("Landed");
                 landParticles.Play();
 
-                if (!landSFX.isPlaying && landSFX.enabled) {
-                    landSFX.Play();
+                if (!landSFX.IsNull){
+                    FMOD.Studio.EventInstance landSFXInstance = FMODUnity.RuntimeManager.CreateInstance(landSFX);
+                    landSFXInstance.start();
                 }
 
                 moveParticles.Play();
@@ -126,9 +127,9 @@ namespace GMTK.PlatformerToolkit {
             myAnimator.ResetTrigger("Landed");
             myAnimator.SetTrigger("Jump");
 
-            if (jumpSFX.enabled) {
-                jumpSFX.Play();
-
+            if (!jumpSFX.IsNull){
+                FMOD.Studio.EventInstance jumpSFXInstance = FMODUnity.RuntimeManager.CreateInstance(jumpSFX);
+                jumpSFXInstance.start();
             }
 
             if (!jumpSqueezing && jumpSqueezeMultiplier > 1) {

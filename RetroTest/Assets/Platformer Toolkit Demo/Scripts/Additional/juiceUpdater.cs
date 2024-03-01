@@ -38,8 +38,11 @@ namespace GMTK.PlatformerToolkit {
         public float tiltSpeedValue = 0;
         public bool jumpSFXToggleValue = false;
         public bool landSFXToggleValue = false;
+        public bool updatingInRealtime = false;
 
         void Update() {
+            if (updatingInRealtime) OnEnable();
+
             if (juiceSettingsReferences) {
                 juiceSettingsReferences.runParticleText.text = Mathf.Round(settingsHome.runParticles).ToString();
                 juiceSettingsReferences.jumpParticleText.text = Mathf.Round(settingsHome.jumpParticles).ToString();

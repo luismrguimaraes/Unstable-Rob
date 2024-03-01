@@ -5786,13 +5786,14 @@ MonoBehaviour:
   runParticlesValue: 2.11
   jumpParticlesValue: 9.5
   landParticlesValue: 23.2
-  jumpSquashValue: 0.89
-  landSquashValue: 0.91
-  trailValue: 4.25
-  tiltAngleValue: 7.8
-  tiltSpeedValue: 14.2
+  jumpSquashValue: 1
+  landSquashValue: 1
+  trailValue: 1.0000001
+  tiltAngleValue: 4
+  tiltSpeedValue: 23.3
   jumpSFXToggleValue: 1
   landSFXToggleValue: 1
+  updatingInRealtime: 0
 --- !u!1 &6108338179199229499
 GameObject:
   m_ObjectHideFlags: 0
@@ -11703,8 +11704,20 @@ MonoBehaviour:
   moveParticles: {fileID: 6869446756405977636}
   jumpParticles: {fileID: 8104253465131366388}
   landParticles: {fileID: 2822670070642933113}
-  jumpSFX: {fileID: 1638438300539662669}
-  landSFX: {fileID: 1460877408444431102}
+  jumpSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  landSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   jumpSquashSettings: {x: 0.8, y: 1.2, z: 0.2}
   landSquashSettings: {x: 1.25, y: 0.8, z: 0.2}
   landSqueezeMultiplier: 0.9

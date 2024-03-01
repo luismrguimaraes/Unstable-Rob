@@ -1108,6 +1108,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inMusicZone: 0
+--- !u!1 &939747951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3068492366874149047, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+  m_PrefabInstance: {fileID: 1281360950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &939747956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939747951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &1072700600 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8829671123831029809, guid: d268379a1a7544736a572440247f3b0c, type: 3}
@@ -1264,6 +1282,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3388242375037391730, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4912838158002735064, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_Name
       value: Player (1)
@@ -1308,10 +1330,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4283703851059325754, guid: d268379a1a7544736a572440247f3b0c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3068492366874149047, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 939747956}
     - targetCorrespondingSourceObject: {fileID: 8829671123831029809, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1072700611}

@@ -23,7 +23,6 @@ public class Music : MonoBehaviour
             musicInstance.setParameterByName("ZoneDistance", 0);
         }else {
             musicInstance.setParameterByName("ZoneDistance", Vector3.Distance(gameObject.transform.position, playerProps.gameObject.transform.position)/40f);
-            print(Vector3.Distance(gameObject.transform.position, playerProps.gameObject.transform.position));
         }
     }
 }
