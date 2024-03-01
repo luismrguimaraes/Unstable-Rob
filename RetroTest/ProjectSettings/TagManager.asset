@@ -4,18 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - MusicZone
+  - Mark
+  - Lab
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Hurt
+  - Kill
+  - Mechanic
   - 
   - 
   - 
@@ -41,4 +42,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Grid - Normal
+    uniqueID: 1967239053
+    locked: 0
+  - name: UI - Back
+    uniqueID: 1604795867
+    locked: 0
+  - name: Character
+    uniqueID: 2989039123
+    locked: 0
+  - name: Grid - Blueprint
+    uniqueID: 3488060373
+    locked: 0
+  - name: UI - Top
+    uniqueID: 562644223
     locked: 0

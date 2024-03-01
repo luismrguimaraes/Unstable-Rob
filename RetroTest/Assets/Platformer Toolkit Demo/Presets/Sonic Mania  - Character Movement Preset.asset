@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9f7fbd9615ce8408e40617aeaa33ee, type: 3}
+  m_Name: Sonic Mania  - Character Movement Preset
+  m_EditorClassIdentifier: 
+  _presetName: Sonic Mania
+  _accel: 7.4
+  _topSpeed: 16.9
+  _decel: 26.1
+  _turnSpeed: 26.1
+  _jumpHeight: 3.4
+  _timeToApex: 0.46
+  _DMM: 1
+  _airControl: 11.79
+  _airControlActual: 11.79
+  _airBrake: 24.1
+  _variableJH: 1
+  _jumpCutoff: 1
+  _doubleJump: 0
