@@ -141,7 +141,7 @@ namespace GMTK.PlatformerToolkit {
 
             // Pick random interval from 0.3 - 1 seconds
             float randomInterval = Random.Range(0.3f, 1f);
-            float randomForceFactor = Random.Range(80, 90)*forceMultiplier;
+            float randomForceFactor = Random.Range(70, 80)*forceMultiplier;
             // Todo: Make this * the max jump height
 
             // Delay of randomInterval
