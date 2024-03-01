@@ -139,22 +139,28 @@ namespace GMTK.PlatformerToolkit {
         public void AirDash(float forceMultiplier) {            
             
 
-            // Pick random interval form 0 - 1 second
-            float randomInterval = Random.Range(0f, 1f);
-            //float randomForceFactor = Random.Range(50f, 70f)*(1+randomInterval);
+            // Pick random interval from 0.3 - 1 seconds
+            float randomInterval = Random.Range(0.3f, 1f);
+            float randomForceFactor = Random.Range(80, 90)*forceMultiplier;
+            // Todo: Make this * the max jump height
 
-            // Call the AirDashImpulse function after the randomInterval, with parameter randomForceFactor
-            Invoke("AirDashImpulse", randomInterval);
+            // Delay of randomInterval
+            Debug.Log("Waiting for " + randomInterval + " seconds before AirDashing");
+            StartCoroutine(AirDashImpulse(randomInterval, randomForceFactor));
+
+
+
             
         }
 
         // Function that adds a force to the character's rigidbody
-        private void AirDashImpulse() {
-            // Pick random force factor from 30 - 100
-            float randomForceFactor = Random.Range(50f, 70f);
-
+        System.Collections.IEnumerator AirDashImpulse(float randomInterval, float randomForceFactor) {
+            
+            yield return new WaitForSeconds(randomInterval);
+            //float randomForceFactor = Random.Range(50f, 70f);
             Debug.Log("AirDash with intensity: " + randomForceFactor);
             body.AddForce(new Vector2(0, randomForceFactor), ForceMode2D.Impulse);
+
         }
     }
 }
