@@ -22,13 +22,23 @@ public class EventsController : MonoBehaviour
         }
     }
 
+    public void AddEventByName(String name)
+    {
+        //TODO IMPLEMENT
+    }
+
     public void AddEvent(Event event_)
     {
         event_.data = playerEventData;
         events.AddLast(event_);
         event_.Initialize();
     }
-    
+
+    public void RemoveEventByName(String name)
+    {
+        //TODO IMPLEMENT
+    }
+
     public void RemoveEvent(Event event_)
     {
         events.Remove(event_);
