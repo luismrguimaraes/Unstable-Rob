@@ -12,6 +12,7 @@ public class EventsController : MonoBehaviour
     protected void Start()
     {
         events = new LinkedList<Event>();
+        AddEvent(new FlipCameraEvent());
     }
 
     protected void Update()
