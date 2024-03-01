@@ -14,11 +14,14 @@ namespace GMTK.PlatformerToolkit {
 
         PresetObject _installedPreset;
 
+        [SerializeField] bool _loadData;
+
         void Awake() {
             _moveScript = GetComponent<characterMovement>();
             _jumpScript = GetComponent<characterJump>();
 
-            InstallPresetData();
+            if (_loadData)
+                InstallPresetData();
         }
 
         private void FixedUpdate() {
