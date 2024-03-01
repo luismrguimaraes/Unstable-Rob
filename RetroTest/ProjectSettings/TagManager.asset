@@ -8,6 +8,7 @@ TagManager:
   - Lab
   - MusicZone
   - FallActivator
+  - AirDashCoin
   layers:
   - Default
   - TransparentFX

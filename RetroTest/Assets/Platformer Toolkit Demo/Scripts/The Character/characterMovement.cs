@@ -134,5 +134,27 @@ namespace GMTK.PlatformerToolkit {
 
             body.velocity = velocity;
         }
+
+        // Function that when called, replicates a automatic mid air dash upwards
+        public void AirDash(float forceMultiplier) {            
+            
+
+            // Pick random interval form 0 - 1 second
+            float randomInterval = Random.Range(0f, 1f);
+            //float randomForceFactor = Random.Range(50f, 70f)*(1+randomInterval);
+
+            // Call the AirDashImpulse function after the randomInterval, with parameter randomForceFactor
+            Invoke("AirDashImpulse", randomInterval);
+            
+        }
+
+        // Function that adds a force to the character's rigidbody
+        private void AirDashImpulse() {
+            // Pick random force factor from 30 - 100
+            float randomForceFactor = Random.Range(50f, 70f);
+
+            Debug.Log("AirDash with intensity: " + randomForceFactor);
+            body.AddForce(new Vector2(0, randomForceFactor), ForceMode2D.Impulse);
+        }
     }
 }

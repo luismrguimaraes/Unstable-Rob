@@ -16,17 +16,24 @@ public class AirDashScript : MonoBehaviour
     public LayerMask Player; // The layer that the player is on
     public Collider2D triggerCollider;
 
+    // force multipler variable
+    public float forceMultiplier = 5f;
+
     // This object, which will be used to check if the player is touching the coin
 
 
     public void Update()
     {
-
+        
         if (triggerCollider.IsTouchingLayers(Player)){
             // Find the player object
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            Debug.Log("Player has collided with AirDash Coin");
-            Debug.Log("Player Object: " + player);
+
+            // calling the airdash function from the player's script
+            player.GetComponent<GMTK.PlatformerToolkit.characterMovement>().AirDash(forceMultiplier);
+
+            // Destroy the coin
+            Destroy(gameObject);
         }
 
         // Floating animation
