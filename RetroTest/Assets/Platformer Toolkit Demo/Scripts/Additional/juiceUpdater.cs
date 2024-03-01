@@ -81,9 +81,6 @@ namespace GMTK.PlatformerToolkit {
 
                 juiceSettingsReferences.tiltAngleSlider.value = juiceScript.maxTilt;
                 juiceSettingsReferences.tiltSpeedSlider.value = juiceScript.tiltSpeed;
-
-                juiceSettingsReferences.jumpSFXtoggle.isOn = settingsHome.jumpSFX.enabled;
-                juiceSettingsReferences.landSFXtoggle.isOn = settingsHome.landSFX.enabled;
             }
             else {
                 changeRunParticles(runParticlesValue);
@@ -94,8 +91,6 @@ namespace GMTK.PlatformerToolkit {
                 changeTrail(trailValue);
                 changeTiltAmount(tiltAngleValue);
                 changeTiltSpeed(tiltSpeedValue);
-                settingsHome.jumpSFX.enabled = jumpSFXToggleValue;
-                settingsHome.landSFX.enabled = landSFXToggleValue;
             }
         }
 

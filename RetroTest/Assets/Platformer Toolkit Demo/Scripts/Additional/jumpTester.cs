@@ -26,12 +26,6 @@ namespace GMTK.PlatformerToolkit {
         [SerializeField] GameObject squareBoxGO;
         [SerializeField] GameObject roundedBoxGO;
 
-        [SerializeField] public AudioSource jumpSFX;
-        [SerializeField] public AudioSource landSFX;
-        public bool jumpSFXisOn;
-        public bool landSFXisOn;
-
-
         public float runParticles;
         public float jumpParticles;
         public float landParticles;
@@ -56,8 +50,6 @@ namespace GMTK.PlatformerToolkit {
             else {
                 switchToSquareBox();
             }
-
-
 
         }
         [ContextMenu("Flip")]
@@ -86,7 +78,6 @@ namespace GMTK.PlatformerToolkit {
 
             }
         }
-
 
 
 
@@ -136,24 +127,6 @@ namespace GMTK.PlatformerToolkit {
                 switchToRoundedBox();
             }
         }
-
-
-        public void toggleJumpSFX(bool turnOn) {
-            if (!turnOn) {
-                jumpSFX.enabled = false;
-            }
-            else {
-                jumpSFX.enabled = true;
-            }
-        }
-
-        public void toggleLandSFX(bool turnOn) {
-            if (!turnOn) {
-                landSFX.enabled = false;
-            }
-            else {
-                landSFX.enabled = true;
-            }
-        }
+    
     }
 }
