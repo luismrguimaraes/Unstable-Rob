@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class CharacterPlatformGrabbing : MonoBehaviour
 {
     public InputActionAsset controls;
-    public InputAction grabAction;
+    public InputAction jumpAction;
     public characterJump charJump;
     public float y_offset = -0.2f;
     public bool isGrabbing;
@@ -17,7 +17,7 @@ public class CharacterPlatformGrabbing : MonoBehaviour
 
 
     private void Start(){
-        grabAction = controls.FindAction("Grab");
+        jumpAction = controls.FindAction("Jump");
     }
     private void Update()
     {
@@ -31,14 +31,14 @@ public class CharacterPlatformGrabbing : MonoBehaviour
             grabTimer = 0;
             resetTimer = 0;
         }
-        if (grabAction.IsPressed() && !isGrabbing && grabResetElapsed())
+        if (jumpAction.IsPressed() && !isGrabbing && grabResetElapsed())
         {
 
             if (touchingPlatforms>0){
                 isGrabbing = true;
             }
         }else{
-            if (grabAction.WasReleasedThisFrame()){
+            if (jumpAction.WasReleasedThisFrame()){
                 isGrabbing = false;
             }
         }

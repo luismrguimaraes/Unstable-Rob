@@ -6053,11 +6053,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controls: {fileID: -944628639613478452, guid: f3c71efb2e74147528612863d177216c, type: 3}
-  grabAction:
-    m_Name: Grab
+  jumpAction:
+    m_Name: Jump
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 38a68ceb-de16-491e-b95c-c75be1aa3cd4
+    m_Id: 58b96783-5bf1-44be-9720-1de24c5207ca
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
