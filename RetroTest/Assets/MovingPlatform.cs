@@ -13,6 +13,7 @@ public class MovingPlatform : MonoBehaviour
     public float timeCounter;
     public Vector3 pivot;
     private Transform previousPlayerParent;
+    public bool yMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,10 @@ public class MovingPlatform : MonoBehaviour
         if (!active)
             return;
         timeCounter += Time.deltaTime;
-        transform.SetPositionAndRotation(new Vector3 (pivot.x + amplitude * Mathf.Sin(2*Mathf.PI * rate * timeCounter) , pivot.y, pivot.z), transform.rotation);
+        if(!yMove)
+            transform.SetPositionAndRotation(new Vector3 (pivot.x + amplitude * Mathf.Sin(2*Mathf.PI * rate * timeCounter) , pivot.y, pivot.z), transform.rotation);
+        else
+            transform.SetPositionAndRotation(new Vector3(pivot.x, pivot.y + amplitude * Mathf.Sin(2 * Mathf.PI * rate * timeCounter), pivot.z), transform.rotation);
     }
 
     void OnCollisionEnter2D(Collision2D c){
