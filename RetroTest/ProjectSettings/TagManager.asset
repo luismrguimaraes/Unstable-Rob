@@ -10,6 +10,7 @@ TagManager:
   - FallActivator
   - AirDashCoin
   - HeatUI
+  - Music
   layers:
   - Default
   - TransparentFX
