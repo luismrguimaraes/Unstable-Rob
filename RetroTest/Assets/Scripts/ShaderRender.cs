@@ -24,12 +24,12 @@ public class ShaderRender : MonoBehaviour
         material.SetColor("_Color", matColor);
         
         level = Mathf.Pow(heatControl.HeatLevel, 3);
-        digitalGlitch.intensity = Mathf.Lerp(0, 0.11f, level);
+        digitalGlitch.intensity = Mathf.Lerp(0, 0.04f, level);
         
         level = Mathf.Pow(heatControl.HeatLevel, 2);
-        analogGlitch.scanLineJitter = Mathf.Lerp(0, 0.5f, level);
-        analogGlitch.verticalJump = Mathf.Lerp(0, 0.155f, level);
-        analogGlitch.horizontalShake = Mathf.Lerp(0, 0.04f, level);
+        analogGlitch.scanLineJitter = Mathf.Lerp(0, 0.125f, level);
+        analogGlitch.verticalJump = Mathf.Lerp(0, 0.055f, level);
+        analogGlitch.horizontalShake = Mathf.Lerp(0, 0.025f, level);
     }
 
 }
