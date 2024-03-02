@@ -6504,7 +6504,7 @@ GameObject:
   - component: {fileID: 956266808}
   - component: {fileID: 956266809}
   - component: {fileID: 956266810}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Follow
   m_TagString: FallActivator
   m_Icon: {fileID: 0}
