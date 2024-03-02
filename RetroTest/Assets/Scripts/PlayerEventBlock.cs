@@ -20,6 +20,7 @@ public class PlayerEventBlock : MonoBehaviour
     {
         img = GetComponent<Image>();
         eventsControl = FindFirstObjectByType<EventsController>();
+        curDisplay = Random.Range(0, events.Length);
     }
 
     private void Update()
@@ -47,13 +48,12 @@ public class PlayerEventBlock : MonoBehaviour
             if(fastTime || medTime || slowTime)
             {
                 accTime = 0;
-                curDisplay = Random.Range(0, events.Length);
-                while (eventTaken.Contains(curDisplay))
+                do
                 {
                     curDisplay++;
                     if (curDisplay >= events.Length)
                         curDisplay = 0;
-                }
+                } while (eventTaken.Contains(curDisplay));
                 img.sprite = eventSprites[curDisplay];
             }
         }

@@ -8,6 +8,7 @@ public class HeatControl : MonoBehaviour
 
     [SerializeField] public float HeatLevel;
     [SerializeField] private Image image;
+    [SerializeField] private float BaseHeatSpeed;
     [SerializeField] private float HeatSpeed;
     private Vector3 originalPosition;
     public GameObject eventPrefab;
@@ -20,12 +21,11 @@ public class HeatControl : MonoBehaviour
     private void Start()
     {
         originalPosition = bar.localPosition;
-
-        //Time.timeScale = 0.1f;
     }
 
     void Update()
     {
+        HeatSpeed = BaseHeatSpeed / (FindCurrentLimit() + 1);
         HeatLevel += Time.deltaTime*HeatSpeed;
         HeatLevel = Mathf.Clamp(HeatLevel, 0, 1);
         image.fillAmount = HeatLevel;
@@ -62,6 +62,16 @@ public class HeatControl : MonoBehaviour
     {
         HeatLevel -= 0.1f*coolingSpeed*HeatSpeed;
         HeatLevel = Mathf.Clamp(HeatLevel, 0, 1);
+    }
+
+    private int FindCurrentLimit()
+    {
+        for(int i = 0; i < limits.Length; i++)
+        {
+            if(HeatLevel < limits[i])
+                return i;
+        }
+        return limits.Length;
     }
 
     // Event that accelerates the heat speed of the player

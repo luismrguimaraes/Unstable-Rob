@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 1357642777133301106}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.22, y: -2.79, z: -5.5}
+  m_LocalPosition: {x: -8.22, y: -1.8299999, z: -5.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -388,7 +388,7 @@ Transform:
   m_GameObject: {fileID: 3068492366874149047}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.22, y: -2.79, z: -5.5}
+  m_LocalPosition: {x: -8.22, y: -1.8299999, z: -5.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -430,7 +430,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 6.6
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11572,6 +11572,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inMusicZone: 0
+  deathSfx:
+    Guid:
+      Data1: 726777995
+      Data2: 1339005006
+      Data3: 1445664185
+      Data4: 775659746
+    Path: event:/Death
 --- !u!1 &8927110266766881447
 GameObject:
   m_ObjectHideFlags: 0

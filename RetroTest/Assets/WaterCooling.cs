@@ -40,8 +40,6 @@ public class WaterCooling : MonoBehaviour
             if (!infiniteWater){
                 waterRemaining -= 1*Time.deltaTime;
             }
-            // Print remaining cooling time
-            Debug.Log("Water Remaining: " + waterRemaining);
 
 
         }

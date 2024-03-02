@@ -7,6 +7,8 @@ public class KILLOnTouch : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-            Destroy(collision.gameObject); //dont do this, call a death function
+        {
+            collision.gameObject.GetComponent<PlayerProperties>().Die();
+        }
     }
 }

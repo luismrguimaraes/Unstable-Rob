@@ -7,12 +7,13 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public GameObject player;
+    public bool active = false;
     public float rate;
     public float amplitude;
     public float timeCounter;
     public Vector3 pivot;
     private Transform previousPlayerParent;
+    public bool yMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,17 +23,28 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (!active)
+            return;
         timeCounter += Time.deltaTime;
-        transform.SetPositionAndRotation(new Vector3 (pivot.x + amplitude * Mathf.Sin(2*Mathf.PI * rate * timeCounter) , pivot.y, pivot.z), transform.rotation);
+        if(!yMove)
+            transform.SetPositionAndRotation(new Vector3 (pivot.x + amplitude * Mathf.Sin(2*Mathf.PI * rate * timeCounter) , pivot.y, pivot.z), transform.rotation);
+        else
+            transform.SetPositionAndRotation(new Vector3(pivot.x, pivot.y + amplitude * Mathf.Sin(2 * Mathf.PI * rate * timeCounter), pivot.z), transform.rotation);
     }
 
     void OnCollisionEnter2D(Collision2D c){
         print(c);
-        previousPlayerParent = player.transform.parent;
-        player.transform.parent = transform;
+        if (!c.gameObject.CompareTag("Player"))
+            return;
+        active = true;
+        previousPlayerParent = c.gameObject.transform.parent.parent;
+        c.gameObject.transform.parent.parent = transform;
+
     }
     void OnCollisionExit2D(Collision2D c){
-        player.transform.parent = previousPlayerParent;
+        if (!c.gameObject.CompareTag("Player"))
+            return;
+        c.gameObject.transform.parent.parent = previousPlayerParent;
 
     }
 }

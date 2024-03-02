@@ -11,6 +11,7 @@ public class EventsController : MonoBehaviour
         new FlipCameraEvent(),
         new InvertMovementEvent(),
         new JumpEvent(),
+        new SlipperyEvent(),
     };
     public EventData playerEventData;
     public LinkedList<Event> events;
