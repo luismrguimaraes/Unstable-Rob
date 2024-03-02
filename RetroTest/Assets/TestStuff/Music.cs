@@ -18,11 +18,5 @@ public class Music : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerProps.inMusicZone) {
-            print("inzone");
-            musicInstance.setParameterByName("ZoneDistance", 0);
-        }else {
-            musicInstance.setParameterByName("ZoneDistance", Vector3.Distance(gameObject.transform.position, playerProps.gameObject.transform.position)/40f);
-        }
     }
 }

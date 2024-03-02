@@ -27,11 +27,8 @@ public class AirDashScript : MonoBehaviour
 
     public void Update()
     {
-
-        
         if (cooldown > 0)
         {
-            Debug.Log("Cooldown: " + cooldown);
             cooldown -= Time.deltaTime;
             if (cooldown <= 0)
             {

@@ -6,14 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerProperties : MonoBehaviour
 {
-    public bool inMusicZone;
     public FMODUnity.EventReference deathSfx;
+    public GameObject playerCharacter;
     private bool dying = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        inMusicZone = false;
     }
 
     // Update is called once per frame
@@ -29,22 +28,12 @@ public class PlayerProperties : MonoBehaviour
     {
         dying = true;
         FMODUnity.RuntimeManager.CreateInstance(deathSfx).start();
+        gameObject.SetActive(false);
         Invoke(nameof(Restart), 0.33f);
     }
 
     private void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    void OnTriggerEnter2D (Collider2D c){
-        if (c.gameObject.tag == "MusicZone"){
-            inMusicZone = true;
-        }
-    }
-    void OnTriggerExit2D (Collider2D c){
-        if (c.gameObject.tag == "MusicZone"){
-            inMusicZone = false;
-        }
     }
 }
