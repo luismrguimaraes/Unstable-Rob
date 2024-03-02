@@ -52,6 +52,58 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+--- !u!114 &-391922287626681062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DynamicMusic
+  m_EditorClassIdentifier: 
+  Path: event:/DynamicMusic
+  Guid:
+    Data1: -1896935172
+    Data2: 1288468291
+    Data3: 1102441660
+    Data4: -1815617571
+  Banks:
+  - {fileID: 6193963329065090831}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6094532932797049519}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13090
+--- !u!114 &-227864129376738472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/heatPercent
+  m_EditorClassIdentifier: 
+  Name: heatPercent
+  StudioPath: parameter:/heatPercent
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3311618259
+    data2: 2240921135
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,12 +122,14 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -5530414666821635611}
   - {fileID: 4146957157209017427}
-  EditorParameters: []
+  - {fileID: -391922287626681062}
+  EditorParameters:
+  - {fileID: -227864129376738472}
   MasterBanks:
   - {fileID: 6193963329065090831}
   StringsBanks:
   - {fileID: 2876602958952172030}
-  cacheTime: 638449018773662744
+  cacheTime: 638449869191099264
   cacheVersion: 131616
 --- !u!114 &2876602958952172030
 MonoBehaviour:
@@ -92,10 +146,10 @@ MonoBehaviour:
   Path: ../RetroTestFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638449018773662744
+  lastModified: 638449869191099264
   FileSizes:
   - Name: Desktop
-    Value: 926
+    Value: 1022
   Exists: 1
 --- !u!114 &4146957157209017427
 MonoBehaviour:
@@ -125,6 +179,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 25600
+--- !u!114 &6094532932797049519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DynamicMusic/heatPercent
+  m_EditorClassIdentifier: 
+  Name: heatPercent
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3311618259
+    data2: 2240921135
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &6193963329065090831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,10 +218,10 @@ MonoBehaviour:
   Path: ../RetroTestFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638449018773602946
+  lastModified: 638449869191084111
   FileSizes:
   - Name: Desktop
-    Value: 998880
+    Value: 1609024
   Exists: 1
 --- !u!114 &6975408742218627942
 MonoBehaviour:
