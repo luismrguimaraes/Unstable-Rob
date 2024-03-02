@@ -15,6 +15,7 @@ public class HeatControl : MonoBehaviour
     public float[] limits;
     private int nextLimit = 0;
     [SerializeField] private Transform bar;
+    [SerializeField] private float coolingSpeed = 0.5f;
 
     private void Start()
     {
@@ -59,8 +60,12 @@ public class HeatControl : MonoBehaviour
     // Event that cools the player down a bit
     public void WaterCooling()
     {
-        HeatLevel -= 0.001f;
+        HeatLevel -= 0.1f*coolingSpeed*HeatSpeed;
         HeatLevel = Mathf.Clamp(HeatLevel, 0, 1);
+
+
+        Debug.Log("Water Cooling: " + HeatLevel);
+        
     }
     
 

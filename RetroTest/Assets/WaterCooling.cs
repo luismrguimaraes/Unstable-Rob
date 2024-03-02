@@ -10,8 +10,10 @@ public class WaterCooling : MonoBehaviour
     public Collider2D triggerCollider;
 
     // waterRemaining
-    public double waterRemaining;
+    public double waterRemaining = 2;
 
+    // infiniteWater boolean
+    public bool infiniteWater;
 
     // Start is called before the first frame update
     void Start()
@@ -35,15 +37,16 @@ public class WaterCooling : MonoBehaviour
             heatUI.GetComponent<HeatControl>().WaterCooling();
 
             // reduce the cooling time a bit
-            waterRemaining -= 0.5*Time.deltaTime;
-
+            if (!infiniteWater){
+                waterRemaining -= 1*Time.deltaTime;
+            }
             // Print remaining cooling time
             Debug.Log("Water Remaining: " + waterRemaining);
 
 
         }
 
-        if (waterRemaining <= 0)
+        if (waterRemaining <= 0 && !infiniteWater)
         {
             Destroy(gameObject);
         }
