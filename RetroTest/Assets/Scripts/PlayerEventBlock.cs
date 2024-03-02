@@ -25,7 +25,6 @@ public class PlayerEventBlock : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(eventTaken.Count);
         Vector3 move = (targetPos - transform.localPosition);
 
         if(move.magnitude > 0.05f)

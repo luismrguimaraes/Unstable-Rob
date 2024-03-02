@@ -218,7 +218,6 @@ GameObject:
   m_Component:
   - component: {fileID: 277344777}
   - component: {fileID: 277344780}
-  - component: {fileID: 277344779}
   - component: {fileID: 277344778}
   - component: {fileID: 277344781}
   m_Layer: 0
@@ -260,25 +259,7 @@ MonoBehaviour:
     m_Bits: 64
   triggerCollider: {fileID: 277344781}
   waterRemaining: 10
---- !u!114 &277344779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277344776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2fda17945b164c5f85b3b3058439a8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player:
-    serializedVersion: 2
-    m_Bits: 0
-  triggerCollider: {fileID: 0}
-  respawnTime: 3
-  cooldown: 0
-  forceMultiplier: 1
+  infiniteWater: 0
 --- !u!212 &277344780
 SpriteRenderer:
   m_ObjectHideFlags: 0
