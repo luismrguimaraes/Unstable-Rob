@@ -128908,10 +128908,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Darkness
       objectReference: {fileID: 0}
-    - target: {fileID: 3457707884346872481, guid: 6ba07c89cdc7831499a5e1040ea8c6e3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5100121297957913960, guid: 6ba07c89cdc7831499a5e1040ea8c6e3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
