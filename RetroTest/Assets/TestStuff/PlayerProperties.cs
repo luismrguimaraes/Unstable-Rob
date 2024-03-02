@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class PlayerProperties : MonoBehaviour
 {
     public FMODUnity.EventReference deathSfx;
-    public GameObject playerCharacter;
     private bool dying = false;
 
     // Start is called before the first frame update
