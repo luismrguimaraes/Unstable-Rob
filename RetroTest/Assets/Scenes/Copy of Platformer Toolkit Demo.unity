@@ -1023,15 +1023,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902362685}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 870b9a8f0f82f4f56800cc427bcd1025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scanLineJitter: 0.021
-  _verticalJump: 0.065
-  _horizontalShake: 0.03
-  _colorDrift: 0.094
+  _scanLineJitter: 0
+  _verticalJump: 0
+  _horizontalShake: 0
+  _colorDrift: 0
   _shader: {fileID: 4800000, guid: da33272284ea24f208f36998880990be, type: 3}
 --- !u!114 &902362691
 MonoBehaviour:
@@ -1040,12 +1040,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902362685}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a3a070408aa941ab83ae10be1708848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _intensity: 0.001
+  _intensity: 0
   _shader: {fileID: 4800000, guid: ba40dc630e1d9417cb9ea22586ece1e1, type: 3}
 --- !u!114 &902362693
 MonoBehaviour:
@@ -1091,6 +1091,8 @@ MonoBehaviour:
     m_NumColorKeys: 4
     m_NumAlphaKeys: 4
   heatControl: {fileID: 1969305575}
+  digitalGlitch: {fileID: 902362691}
+  analogGlitch: {fileID: 902362690}
 --- !u!1 &932632261
 GameObject:
   m_ObjectHideFlags: 0
@@ -129141,6 +129143,10 @@ PrefabInstance:
     - target: {fileID: 3355592375984407969, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_projectionMatrixMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920580780746452762, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+      propertyPath: HeatSpeed
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4912838158002735064, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_Name
