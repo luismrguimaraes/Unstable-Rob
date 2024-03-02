@@ -14,6 +14,7 @@ public class EventData {
     public GameObject player;
     public CharacterMovementDataController movementDataController;
     public characterJump jumpScript;
+    public GameObject darkness;
 }
 public abstract class Event {
     public string Id { get; set; }
