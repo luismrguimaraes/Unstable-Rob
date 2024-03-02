@@ -1,58 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6531786311941195201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Jump/ZoneDistance
-  m_EditorClassIdentifier: 
-  Name: ZoneDistance
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1322221732
-    data2: 3566883721
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-5530414666821635611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Jump
-  m_EditorClassIdentifier: 
-  Path: event:/Jump
-  Guid:
-    Data1: -59858532
-    Data2: 1239931187
-    Data3: 1491446671
-    Data4: 1235902907
-  Banks:
-  - {fileID: 6193963329065090831}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -6531786311941195201}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1000
---- !u!114 &-391922287626681062
+--- !u!114 &-228124080064416490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,39 +19,15 @@ MonoBehaviour:
     Data3: 1102441660
     Data4: -1815617571
   Banks:
-  - {fileID: 6193963329065090831}
+  - {fileID: 437119179941334656}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 6094532932797049519}
+  - {fileID: 2293754381985152091}
   MinDistance: 1
   MaxDistance: 20
   Length: 13090
---- !u!114 &-227864129376738472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/heatPercent
-  m_EditorClassIdentifier: 
-  Name: heatPercent
-  StudioPath: parameter:/heatPercent
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3311618259
-    data2: 2240921135
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,21 +41,20 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 2876602958952172030}
-  - {fileID: 6193963329065090831}
+  - {fileID: 8427852945850397250}
+  - {fileID: 437119179941334656}
   EditorEvents:
-  - {fileID: -5530414666821635611}
-  - {fileID: 4146957157209017427}
-  - {fileID: -391922287626681062}
+  - {fileID: 7352105283396153906}
+  - {fileID: -228124080064416490}
   EditorParameters:
-  - {fileID: -227864129376738472}
+  - {fileID: 7869734126550136746}
   MasterBanks:
-  - {fileID: 6193963329065090831}
+  - {fileID: 437119179941334656}
   StringsBanks:
-  - {fileID: 2876602958952172030}
-  cacheTime: 638449880840490286
+  - {fileID: 8427852945850397250}
+  cacheTime: 638450033512931851
   cacheVersion: 131616
---- !u!114 &2876602958952172030
+--- !u!114 &437119179941334656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,45 +64,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../RetroTestFMOD/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638449880840490286
+  Path: ../RetroTestFMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638450033512925647
   FileSizes:
   - Name: Desktop
-    Value: 1022
+    Value: 734976
   Exists: 1
---- !u!114 &4146957157209017427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music
-  m_EditorClassIdentifier: 
-  Path: event:/Music
-  Guid:
-    Data1: 1778695125
-    Data2: 1138889012
-    Data3: -113630833
-    Data4: -1761917835
-  Banks:
-  - {fileID: 6193963329065090831}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 6975408742218627942}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 25600
---- !u!114 &6094532932797049519
+--- !u!114 &2293754381985152091
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,9 +84,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/DynamicMusic/heatPercent
+  m_Name: parameter:/DynamicMusic/HeatLevel
   m_EditorClassIdentifier: 
-  Name: heatPercent
+  Name: HeatLevel
   StudioPath: 
   Min: 0
   Max: 1
@@ -203,99 +98,7 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &6193963329065090831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../RetroTestFMOD/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638449880840483969
-  FileSizes:
-  - Name: Desktop
-    Value: 1609024
-  Exists: 1
---- !u!114 &6975408742218627942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/ZoneDistance
-  m_EditorClassIdentifier: 
-  Name: ZoneDistance
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1322221732
-    data2: 3566883721
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-2609547794271228644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../RetroTestFMOD/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638449946574412591
-  FileSizes:
-  - Name: Desktop
-    Value: 998880
-  Exists: 1
---- !u!114 &-560952610010901893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Jump
-  m_EditorClassIdentifier: 
-  Path: event:/Jump
-  Guid:
-    Data1: -59858532
-    Data2: 1239931187
-    Data3: 1491446671
-    Data4: 1235902907
-  Banks:
-  - {fileID: -2609547794271228644}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -93978559703033422}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1000
---- !u!114 &-93978559703033422
+--- !u!114 &2476568863978282241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -319,32 +122,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 8910774919080834129}
-  - {fileID: -2609547794271228644}
-  EditorEvents:
-  - {fileID: -560952610010901893}
-  - {fileID: 7575947938089438219}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -2609547794271228644}
-  StringsBanks:
-  - {fileID: 8910774919080834129}
-  cacheTime: 638449946574414645
-  cacheVersion: 131616
---- !u!114 &7575947938089438219
+--- !u!114 &7352105283396153906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -354,25 +132,49 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music
+  m_Name: event:/Jump
   m_EditorClassIdentifier: 
-  Path: event:/Music
+  Path: event:/Jump
   Guid:
-    Data1: 1778695125
-    Data2: 1138889012
-    Data3: -113630833
-    Data4: -1761917835
+    Data1: -59858532
+    Data2: 1239931187
+    Data3: 1491446671
+    Data4: 1235902907
   Banks:
-  - {fileID: -2609547794271228644}
-  IsStream: 1
+  - {fileID: 437119179941334656}
+  IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters:
-  - {fileID: -3269452298704871350}
+  - {fileID: 2476568863978282241}
   MinDistance: 1
   MaxDistance: 20
-  Length: 25600
---- !u!114 &8910774919080834129
+  Length: 1000
+--- !u!114 &7869734126550136746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HeatLevel
+  m_EditorClassIdentifier: 
+  Name: HeatLevel
+  StudioPath: parameter:/HeatLevel
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3311618259
+    data2: 2240921135
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &8427852945850397250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -387,8 +189,8 @@ MonoBehaviour:
   Path: ../RetroTestFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638449946574414645
+  lastModified: 638450033512931851
   FileSizes:
   - Name: Desktop
-    Value: 926
+    Value: 1038
   Exists: 1
