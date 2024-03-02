@@ -62,10 +62,22 @@ public class HeatControl : MonoBehaviour
     {
         HeatLevel -= 0.1f*coolingSpeed*HeatSpeed;
         HeatLevel = Mathf.Clamp(HeatLevel, 0, 1);
+    }
 
+    // Event that accelerates the heat speed of the player
+    public void HeatZone()
+    {
+        HeatLevel += 0.02f*HeatSpeed;
+        HeatLevel = Mathf.Clamp(HeatLevel, 0, 1);
+        Debug.Log("HeatZone");
+    }
 
-        Debug.Log("Water Cooling: " + HeatLevel);
-        
+    // Event that slows down the heat speed of the player
+    public void ColdZone()
+    {
+        HeatLevel -= 0.007f*HeatSpeed;
+        HeatLevel = Mathf.Clamp(HeatLevel, 0, 1);
+        Debug.Log("ColdZone");
     }
     
 
