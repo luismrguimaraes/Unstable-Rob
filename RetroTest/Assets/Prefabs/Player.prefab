@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Follow: {fileID: 8362602561333455847}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 6.6
+    OrthographicSize: 8
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -5576,17 +5576,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 0, y: 1.5, z: 0}
-  m_LookaheadTime: 0.3
-  m_LookaheadSmoothing: 10
+  m_LookaheadTime: 0.35
+  m_LookaheadSmoothing: 6.3
   m_LookaheadIgnoreY: 1
   m_XDamping: 0.5
   m_YDamping: 1
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenY: 0.56
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.015
+  m_DeadZoneWidth: 0.06
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
