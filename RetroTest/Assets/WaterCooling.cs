@@ -9,8 +9,8 @@ public class WaterCooling : MonoBehaviour
     public LayerMask Player; // The layer that the player is on
     public Collider2D triggerCollider;
 
-    // cooling time, in seconds
-    public float coolingTime = 5;
+    // waterRemaining
+    public double waterRemaining;
 
 
     // Start is called before the first frame update
@@ -32,14 +32,24 @@ public class WaterCooling : MonoBehaviour
             GameObject heatUI = GameObject.FindGameObjectWithTag("HeatUI");
 
             // Call the WaterCooling function from the HeatUI script
-            heatUI.GetComponent<HeatControl>().WaterCooling(coolingTime);
+            heatUI.GetComponent<HeatControl>().WaterCooling();
 
-            // Destroy the object
+            // reduce the cooling time a bit
+            waterRemaining -= 0.5*Time.deltaTime;
+
+            // Print remaining cooling time
+            Debug.Log("Water Remaining: " + waterRemaining);
+
+
+        }
+
+        if (waterRemaining <= 0)
+        {
             Destroy(gameObject);
         }
 
         // Floating animation
-        transform.position += new Vector3(0, Mathf.Sin(Time.time * 3) * 0.01f, 0);
+        //transform.position += new Vector3(0, Mathf.Sin(Time.time * 3) * 0.01f, 0);
         
     }
 }
