@@ -19,7 +19,7 @@ public class PlayerProperties : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!dying && transform.position.y < -5)
+        if(!dying && transform.position.y < -10)
         {
             Die();
         }
