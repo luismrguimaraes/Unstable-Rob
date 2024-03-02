@@ -78,3 +78,5 @@ mono_crash*
 
 # Mac OS
 .DS_Store
+
+fmod_editor.log
