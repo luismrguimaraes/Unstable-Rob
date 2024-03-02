@@ -257,6 +257,17 @@
                 },
                 {
                     "name": "",
+                    "id": "f27b1688-2034-4d39-885f-439ad18104fd",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1835bd3c-af52-4557-96db-34b9f3c1dc73",
                     "path": "<Keyboard>/p",
                     "interactions": "",
