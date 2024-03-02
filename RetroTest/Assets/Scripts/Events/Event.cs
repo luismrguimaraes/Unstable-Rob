@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using GMTK.PlatformerToolkit;
+using Kino;
 using UnityEngine;
 
 [System.Serializable]
 public class EventData {
     public Camera camera;
+    public CinemachineVirtualCamera virtualCamera;
+    public DigitalGlitch digitalGlitch;
+    public AnalogGlitch analogGlitch;
     public GameObject player;
     public CharacterMovementDataController movementDataController;
-    // TODO: Input Controller (to invert)
+    public characterJump jumpScript;
+    public GameObject darkness;
 }
 public abstract class Event {
     public string Id { get; set; }

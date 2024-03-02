@@ -40,6 +40,7 @@ namespace GMTK.PlatformerToolkit {
         private bool pressingJump;
         public bool onGround;
         private bool currentlyJumping;
+        private float invertMultiplier = 1f;
 
         void Awake() {
             //Find the character's Rigidbody and ground detection and juice scripts
@@ -102,7 +103,7 @@ namespace GMTK.PlatformerToolkit {
         private void setPhysics() {
             //Determine the character's gravity scale, using the stats provided. Multiply it by a gravMultiplier, used later
             Vector2 newGravity = new Vector2(0, (-2 * jumpHeight) / (timeToJumpApex * timeToJumpApex));
-            body.gravityScale = (newGravity.y / Physics2D.gravity.y) * gravMultiplier;
+            body.gravityScale = (newGravity.y / Physics2D.gravity.y) * gravMultiplier * invertMultiplier;
         }
 
         private void FixedUpdate() {
@@ -219,6 +220,11 @@ namespace GMTK.PlatformerToolkit {
         public void bounceUp(float bounceAmount) {
             //Used by the springy pad
             body.AddForce(Vector2.up * bounceAmount, ForceMode2D.Impulse);
+        }
+        
+        public void bounce(Vector2 bounceAmount) {
+            //Used by the springy pad
+            body.AddForce(bounceAmount, ForceMode2D.Impulse);
         }
     }
 }

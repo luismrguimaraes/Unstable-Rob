@@ -10,7 +10,7 @@ namespace GMTK.PlatformerToolkit {
         [SerializeField] PresetObject _preset;
 
         public characterMovement _moveScript;
-        characterJump _jumpScript;
+        public characterJump _jumpScript;
 
         PresetObject _installedPreset;
 
