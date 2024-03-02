@@ -20,12 +20,14 @@ public class PlayerEventBlock : MonoBehaviour
     {
         img = GetComponent<Image>();
         eventsControl = FindFirstObjectByType<EventsController>();
+        curDisplay = Random.Range(0, events.Length);
     }
 
     private void Update()
     {
+        Debug.Log(eventTaken.Count);
         Vector3 move = (targetPos - transform.localPosition);
-        Debug.Log(move);
+
         if(move.magnitude > 0.05f)
         {
             transform.localPosition += move * 5 * Time.deltaTime;

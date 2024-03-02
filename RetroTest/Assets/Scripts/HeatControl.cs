@@ -6,16 +6,16 @@ using UnityEngine.UI;
 public class HeatControl : MonoBehaviour
 {
 
-    [SerializeField] private float HeatLevel;
+    [SerializeField] public float HeatLevel;
     [SerializeField] private Image image;
     [SerializeField] private float HeatSpeed;
-    public Gradient gradient;
     private Vector3 originalPosition;
     public GameObject eventPrefab;
     private LinkedList<PlayerEventBlock> blocks = new LinkedList<PlayerEventBlock>();
     public float[] limits;
     private int nextLimit = 0;
     [SerializeField] private Transform bar;
+    [SerializeField] private float coolingSpeed = 0.5f;
 
     private void Start()
     {
@@ -29,7 +29,6 @@ public class HeatControl : MonoBehaviour
         HeatLevel += Time.deltaTime*HeatSpeed;
         HeatLevel = Mathf.Clamp(HeatLevel, 0, 1);
         image.fillAmount = HeatLevel;
-        image.color = gradient.Evaluate(HeatLevel);
         if(HeatLevel > 0.5f)
         {
             float shakeAmount = (HeatLevel - 0.5f);
@@ -57,6 +56,18 @@ public class HeatControl : MonoBehaviour
             nextLimit--;
         }
     }
+
+    // Event that cools the player down a bit
+    public void WaterCooling()
+    {
+        HeatLevel -= 0.1f*coolingSpeed*HeatSpeed;
+        HeatLevel = Mathf.Clamp(HeatLevel, 0, 1);
+
+
+        Debug.Log("Water Cooling: " + HeatLevel);
+        
+    }
+    
 
 
 }

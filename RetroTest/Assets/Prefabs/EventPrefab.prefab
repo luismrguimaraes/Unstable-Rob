@@ -89,12 +89,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventSprites:
-  - {fileID: 21300000, guid: 3a109920d68c1cc40b7127407b88e650, type: 3}
-  - {fileID: 21300000, guid: 50b0295ecbda67640809d968123fafe3, type: 3}
-  - {fileID: 21300000, guid: 0f1d3cc6df7329c4890ce907fa99b9a0, type: 3}
-  - {fileID: 21300000, guid: 1616e922987c13a4d80c7c0a4cc9edc1, type: 3}
+  - {fileID: 21300000, guid: e8fc16d503afecb498651f1a95aa7fe1, type: 3}
+  - {fileID: 21300000, guid: 69c83ae0d62e7454f99fcf48afc9c941, type: 3}
+  - {fileID: 21300000, guid: f77d5bea517428642867332d60997419, type: 3}
+  - {fileID: 21300000, guid: 47423eb3c9864bf4db3fc2339c4071bc, type: 3}
   events:
-  - angry
-  - kiss
-  - cry
-  - thumbsup
+  - Darkness
+  - FlipCamera
+  - InvertMovement
+  - Jump
+  targetPos: {x: 0, y: 0, z: 0}
