@@ -55,6 +55,9 @@ public class HeatControl : MonoBehaviour
             blocks.RemoveFirst();
             nextLimit--;
         }
+
+        // Update FMOD parameter
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("HeatLevel", HeatLevel);
     }
 
     // Event that cools the player down a bit
