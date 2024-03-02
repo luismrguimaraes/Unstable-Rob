@@ -47,12 +47,13 @@ public class PlayerEventBlock : MonoBehaviour
             if(fastTime || medTime || slowTime)
             {
                 accTime = 0;
-                do
+                curDisplay = Random.Range(0, events.Length);
+                while (eventTaken.Contains(curDisplay))
                 {
                     curDisplay++;
                     if (curDisplay >= events.Length)
                         curDisplay = 0;
-                } while (eventTaken.Contains(curDisplay));
+                }
                 img.sprite = eventSprites[curDisplay];
             }
         }
