@@ -6,6 +6,12 @@ using UnityEngine;
 
 public class EventsController : MonoBehaviour
 {
+    private Event[] allEvents = {
+        new DarknessEvent(),
+        new FlipCameraEvent(),
+        new InvertMovementEvent(),
+        new JumpEvent(),
+    };
     public EventData playerEventData;
     public LinkedList<Event> events;
     
@@ -24,7 +30,15 @@ public class EventsController : MonoBehaviour
 
     public void AddEventByName(String name)
     {
-        //TODO IMPLEMENT
+        foreach (Event event_ in allEvents)
+        {
+            if (event_.Id == name)
+            {
+                AddEvent(event_);
+                return;
+            }
+        }
+        Debug.LogError("Event with name " + name + " not found");
     }
 
     public void AddEvent(Event event_)
@@ -36,7 +50,15 @@ public class EventsController : MonoBehaviour
 
     public void RemoveEventByName(String name)
     {
-        //TODO IMPLEMENT
+        foreach (Event event_ in events)
+        {
+            if (event_.Id == name)
+            {
+                RemoveEvent(event_);
+                return;
+            }
+        }
+        Debug.LogError("Event with name " + name + " not found");
     }
 
     public void RemoveEvent(Event event_)

@@ -6,10 +6,9 @@ using UnityEngine.UI;
 public class HeatControl : MonoBehaviour
 {
 
-    [SerializeField] private float HeatLevel;
+    [SerializeField] public float HeatLevel;
     [SerializeField] private Image image;
     [SerializeField] private float HeatSpeed;
-    public Gradient gradient;
     private Vector3 originalPosition;
     public GameObject eventPrefab;
     private LinkedList<PlayerEventBlock> blocks = new LinkedList<PlayerEventBlock>();
@@ -29,7 +28,6 @@ public class HeatControl : MonoBehaviour
         HeatLevel += Time.deltaTime*HeatSpeed;
         HeatLevel = Mathf.Clamp(HeatLevel, 0, 1);
         image.fillAmount = HeatLevel;
-        image.color = gradient.Evaluate(HeatLevel);
         if(HeatLevel > 0.5f)
         {
             float shakeAmount = (HeatLevel - 0.5f);
