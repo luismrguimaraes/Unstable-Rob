@@ -8,10 +8,12 @@ public class FallingPlatform : MonoBehaviour
     private float ShakeAcc = 0;
     private float YVol = 0;
     private Rigidbody2D rb;
+    private BoxCollider2D collider;
 
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        collider = gameObject.GetComponent<BoxCollider2D>();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -28,7 +30,10 @@ public class FallingPlatform : MonoBehaviour
     private void Shake()
     {
         //Debug.Log("shaking aaa");
-        transform.position += new Vector3(0, Random.Range(-0.1f, 0.05f), 0);
+        Vector2 offset = new Vector2(0, Random.Range(-0.1f, 0.05f));
+        collider.offset -= offset;
+        transform.position += new Vector3(0,offset.y,0);
+
         float nextshake = fallTime / 6 - ShakeAcc / 6;
         ShakeAcc += nextshake;
         //Debug.Log(ShakeAcc);

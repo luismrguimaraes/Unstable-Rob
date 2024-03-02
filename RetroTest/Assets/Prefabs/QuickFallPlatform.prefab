@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1056245121015343353}
   - component: {fileID: 8083256134537407465}
   - component: {fileID: 6138876317943401731}
-  - component: {fileID: -8623897355266959861}
+  - component: {fileID: 3661302810128406193}
   m_Layer: 3
-  m_Name: Platform
+  m_Name: QuickFallPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b13b9396127b04040ba79dcf1358d64a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 69d161d8e5df11e41817fec57568dc69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8828125}
   m_EdgeRadius: 0
---- !u!114 &-8623897355266959861
+--- !u!114 &3661302810128406193
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5281321171002798236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b3d186c7afc3884d98d334a1067d5de, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d8169360306f084e900d7033c87997e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallTime: 1
+  fallTime: 0.7
