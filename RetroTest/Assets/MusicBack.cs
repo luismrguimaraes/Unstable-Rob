@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Music : MonoBehaviour
+public class MusicBack : MonoBehaviour
 {
     public FMODUnity.EventReference music;
     FMOD.Studio.EventInstance musicInstance;
