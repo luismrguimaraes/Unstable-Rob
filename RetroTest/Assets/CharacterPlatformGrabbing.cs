@@ -18,7 +18,6 @@ public class CharacterPlatformGrabbing : MonoBehaviour
 
     private void Start(){
         grabAction = controls.FindAction("Grab");
-        print(grabAction);
     }
     private void Update()
     {
@@ -34,10 +33,6 @@ public class CharacterPlatformGrabbing : MonoBehaviour
         }
         if (grabAction.IsPressed() && !isGrabbing && grabResetElapsed())
         {
-            print("canGrab");
-            print(touchingPlatforms);
-            print("!On Ground");
-            print(!charJump.onGround);
 
             if (touchingPlatforms>0){
                 isGrabbing = true;
