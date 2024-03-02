@@ -6154,7 +6154,7 @@ MonoBehaviour:
   charJump: {fileID: 772289788503652291}
   y_offset: -0.75
   isGrabbing: 0
-  grabCoyote: 0.5
+  grabCoyote: 0.25
   grabTimer: 0
   resetTimer: 0
 --- !u!1 &8201661299923415846
