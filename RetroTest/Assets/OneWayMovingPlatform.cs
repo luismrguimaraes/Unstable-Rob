@@ -5,18 +5,19 @@ using System.Transactions;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour
+public class OneWayMovingPlatform : MonoBehaviour
 {
     public bool active = false;
-    public float rate;
-    public float amplitude;
-    public float timeCounter;
-    public Vector3 pivot;
+    public float speed;
+    public Vector3 targetOffset;
     private Transform previousPlayerParent;
-    // Start is called before the first frame update
+    private Vector3 origin;
+    private bool done = false;
+
+
     void Start()
     {
-        pivot = transform.position;
+        origin = transform.position;
     }
 
     // Update is called once per frame
@@ -24,8 +25,13 @@ public class MovingPlatform : MonoBehaviour
     {
         if (!active)
             return;
-        timeCounter += Time.deltaTime;
-        transform.SetPositionAndRotation(new Vector3 (pivot.x + amplitude * Mathf.Sin(2*Mathf.PI * rate * timeCounter) , pivot.y, pivot.z), transform.rotation);
+        if ((transform.position - (origin + targetOffset)).magnitude > 0.05f)
+            transform.position += targetOffset.normalized * Time.deltaTime * speed;
+        else if (!done) {
+            done = true;
+            gameObject.AddComponent<FallingPlatform>();
+        }
+
     }
 
     void OnCollisionEnter2D(Collision2D c){
