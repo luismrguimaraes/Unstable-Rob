@@ -56,5 +56,12 @@ public class HeatControl : MonoBehaviour
         }
     }
 
+    // Event that cools the player for x seconds
+    public void WaterCooling(float time)
+    {
+        Debug.Log("Cooling for " + time + " seconds");
+        HeatLevel = Mathf.Clamp(HeatLevel - time, 0, 1);
+    }
+
 
 }
