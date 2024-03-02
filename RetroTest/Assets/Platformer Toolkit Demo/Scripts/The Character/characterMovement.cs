@@ -38,6 +38,8 @@ namespace GMTK.PlatformerToolkit {
         public bool onGround;
         public bool pressingKey;
         public bool invertedControls;
+        
+        private float previousDeceleration;
 
         private void Awake() {
             //Find the character's Rigidbody and ground detection script
@@ -168,6 +170,17 @@ namespace GMTK.PlatformerToolkit {
         
         public void invertControlsEvent() {
             this.invertedControls = !this.invertedControls;
+        }
+        
+        public void switchDecceleration() {
+            float lowDeceleration = 3f;
+            if (this.maxDecceleration == lowDeceleration) {
+                this.maxDecceleration = previousDeceleration;
+            }
+            else {
+                previousDeceleration = this.maxDecceleration;
+                this.maxDecceleration = lowDeceleration;
+            }
         }
     }
 }
