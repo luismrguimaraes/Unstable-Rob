@@ -7,11 +7,13 @@ public class CharacterPlatformGrabbing : MonoBehaviour
     public InputActionAsset controls;
     public InputAction grabAction;
     public characterJump charJump;
-    public GameObject grabPlatform;
-    private GameObject instanciatedGrabPlatform;
     public float y_offset = -0.2f;
     public bool isGrabbing;
-    private bool canGrabPlatform;
+    private bool touchingPlatform;
+    public float grabCoyote = 0.5f;
+    public float grabTimer = 0f;
+    public float resetTimer = 0f;
+
 
 
     private void Start(){
@@ -20,38 +22,50 @@ public class CharacterPlatformGrabbing : MonoBehaviour
     }
     private void Update()
     {
-        if (grabAction.IsPressed() && !isGrabbing)
+        if (!isGrabbing)
+        {
+            grabTimer += Time.deltaTime;
+            resetTimer += Time.deltaTime;
+        }
+        else
+        {
+            grabTimer = 0;
+            resetTimer = 0;
+        }
+        if (grabAction.IsPressed() && !isGrabbing && grabResetElapsed())
         {
             print("canGrab");
-            print(canGrabPlatform);
+            print(touchingPlatform);
             print("!On Ground");
             print(!charJump.onGround);
 
-            if (canGrabPlatform){
+            if (touchingPlatform){
                 isGrabbing = true;
-                instanciatedGrabPlatform = Instantiate(grabPlatform, new Vector3 (charJump.gameObject.transform.position.x, gameObject.transform.position.y + y_offset, gameObject.transform.position.z) , Quaternion.identity);
             }
         }else{
             if (grabAction.WasReleasedThisFrame()){
-                if (instanciatedGrabPlatform) Destroy(instanciatedGrabPlatform);
                 isGrabbing = false;
             }
         }
         return;
     }
 
+    public bool grabCoyoteElapsed()
+    {
+        return grabTimer >= grabCoyote;
+    }
+
+    public bool grabResetElapsed()
+    {
+        return resetTimer >= grabCoyote;
+    }
+
     private void OnCollisionEnter2D(Collision2D c){
-        if (!charJump.onGround){
-            canGrabPlatform = true;
-        }
+        touchingPlatform = true;
     }
 
     private void OnCollisionExit2D(Collision2D c){
-        canGrabPlatform = false;
-        if (isGrabbing){
-            Destroy(instanciatedGrabPlatform);
-            isGrabbing = false;
-        }
+        touchingPlatform = false;
     }
 
 }

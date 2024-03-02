@@ -41,6 +41,8 @@ namespace GMTK.PlatformerToolkit {
         public bool onGround;
         private bool currentlyJumping;
 
+        public CharacterPlatformGrabbing grabber;
+
         void Awake() {
             //Find the character's Rigidbody and ground detection and juice scripts
 
@@ -66,12 +68,13 @@ namespace GMTK.PlatformerToolkit {
                 }
             }
         }
-
+        
         void Update() {
-            setPhysics();
+            setPhysics(grabber.isGrabbing);
 
             //Check if we're on ground, using Kit's Ground script
             onGround = ground.GetOnGround();
+
 
             //Jump buffer allows us to queue up a jump, which will play when we next hit the ground
             if (jumpBuffer > 0) {
@@ -99,7 +102,11 @@ namespace GMTK.PlatformerToolkit {
             }
         }
 
-        private void setPhysics() {
+        private void setPhysics(bool gravDisabled) {
+            if (gravDisabled)
+                body.constraints = RigidbodyConstraints2D.FreezeAll;
+            else
+                body.constraints = RigidbodyConstraints2D.FreezeRotation;
             //Determine the character's gravity scale, using the stats provided. Multiply it by a gravMultiplier, used later
             Vector2 newGravity = new Vector2(0, (-2 * jumpHeight) / (timeToJumpApex * timeToJumpApex));
             body.gravityScale = (newGravity.y / Physics2D.gravity.y) * gravMultiplier;
@@ -180,7 +187,10 @@ namespace GMTK.PlatformerToolkit {
         private void DoAJump() {
 
             //Create the jump, provided we are on the ground, in coyote time, or have a double jump available
-            if (onGround || (coyoteTimeCounter > 0.03f && coyoteTimeCounter < coyoteTime) || canJumpAgain) {
+            if (onGround || (coyoteTimeCounter > 0.03f && coyoteTimeCounter < coyoteTime) || canJumpAgain || !grabber.grabCoyoteElapsed()) {
+
+                grabber.grabTimer += grabber.grabCoyote;
+
                 desiredJump = false;
                 jumpBufferCounter = 0;
                 coyoteTimeCounter = 0;
