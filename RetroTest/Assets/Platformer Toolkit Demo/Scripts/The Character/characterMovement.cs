@@ -37,6 +37,7 @@ namespace GMTK.PlatformerToolkit {
         [Header("Current State")]
         public bool onGround;
         public bool pressingKey;
+        public bool invertedControls;
 
         private void Awake() {
             //Find the character's Rigidbody and ground detection script
@@ -50,6 +51,9 @@ namespace GMTK.PlatformerToolkit {
 
             if (movementLimiter.instance.CharacterCanMove) {
                 directionX = context.ReadValue<float>();
+                if (invertedControls) {
+                    directionX *= -1;
+                }
             }
         }
 
@@ -160,7 +164,10 @@ namespace GMTK.PlatformerToolkit {
             //float randomForceFactor = Random.Range(50f, 70f);
             Debug.Log("AirDash with intensity: " + randomForceFactor);
             body.AddForce(new Vector2(0, randomForceFactor), ForceMode2D.Impulse);
-
+        }
+        
+        public void invertControlsEvent() {
+            this.invertedControls = !this.invertedControls;
         }
     }
 }

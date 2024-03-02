@@ -9,8 +9,8 @@ namespace GMTK.PlatformerToolkit {
     public class CharacterMovementDataController : MonoBehaviour {
         [SerializeField] PresetObject _preset;
 
-        characterMovement _moveScript;
-        characterJump _jumpScript;
+        public characterMovement _moveScript;
+        public characterJump _jumpScript;
 
         PresetObject _installedPreset;
 
