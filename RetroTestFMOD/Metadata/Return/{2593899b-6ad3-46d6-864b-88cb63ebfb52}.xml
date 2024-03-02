@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerReturn" id="{2593899b-6ad3-46d6-864b-88cb63ebfb52}">
+		<property name="name">
+			<value>CrazyChorus</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{3ad077af-7e38-442e-b8f1-a56565e854d1}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{79fbabfb-6237-4b57-a548-4c4a6e5dd8b6}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{ebb62dc5-7fa4-4f15-b841-0bb329ce3ae2}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{3ad077af-7e38-442e-b8f1-a56565e854d1}">
+		<relationship name="effects">
+			<destination>{20c86ab8-baab-4848-b243-c572f72b641e}</destination>
+			<destination>{a6f17ae6-0603-4632-b3f7-63afb4f4ee23}</destination>
+			<destination>{ab4c32de-be53-4a6d-85f6-853bbfc4c0ac}</destination>
+			<destination>{bbbde417-d725-4f26-9b2a-552acee96385}</destination>
+			<destination>{6b4ad3c7-7d0a-4754-8da4-7281d1a7a52e}</destination>
+			<destination>{83921bc7-f786-480f-a4c1-1f711d4c16ce}</destination>
+			<destination>{c432dad8-fdae-49d1-a3f7-c92a7a39dafc}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{79fbabfb-6237-4b57-a548-4c4a6e5dd8b6}" />
+	<object class="MixerBusFader" id="{20c86ab8-baab-4848-b243-c572f72b641e}" />
+	<object class="ChorusEffect" id="{a6f17ae6-0603-4632-b3f7-63afb4f4ee23}">
+		<property name="rate">
+			<value>0.419999987</value>
+		</property>
+		<property name="depth">
+			<value>100</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{b1176709-0980-43e8-a41a-8196934e7cd6}</destination>
+		</relationship>
+	</object>
+	<object class="DelayEffect" id="{ab4c32de-be53-4a6d-85f6-853bbfc4c0ac}">
+		<property name="delay">
+			<value>12</value>
+		</property>
+		<property name="feedback">
+			<value>54.5</value>
+		</property>
+		<property name="dryLevel">
+			<value>-2</value>
+		</property>
+	</object>
+	<object class="ChannelMixEffect" id="{bbbde417-d725-4f26-9b2a-552acee96385}">
+		<property name="outputGrouping">
+			<value>1</value>
+		</property>
+	</object>
+	<object class="FlangerEffect" id="{6b4ad3c7-7d0a-4754-8da4-7281d1a7a52e}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
+		<property name="rate">
+			<value>14.5</value>
+		</property>
+		<property name="delay">
+			<value>0.0540000014</value>
+		</property>
+		<property name="mix">
+			<value>70</value>
+		</property>
+	</object>
+	<object class="MultibandEqEffect" id="{83921bc7-f786-480f-a4c1-1f711d4c16ce}">
+		<property name="filterTypeA">
+			<value>2</value>
+		</property>
+		<property name="filterTypeB">
+			<value>5</value>
+		</property>
+		<property name="filterTypeC">
+			<value>9</value>
+		</property>
+		<property name="frequencyA">
+			<value>16123.1338</value>
+		</property>
+		<property name="frequencyB">
+			<value>905.105713</value>
+		</property>
+		<property name="frequencyC">
+			<value>5200</value>
+		</property>
+		<property name="qualityA">
+			<value>0.100000001</value>
+		</property>
+		<property name="qualityB">
+			<value>0.1499805</value>
+		</property>
+		<property name="gainC">
+			<value>6</value>
+		</property>
+	</object>
+	<object class="CompressorEffect" id="{c432dad8-fdae-49d1-a3f7-c92a7a39dafc}">
+		<property name="threshold">
+			<value>-22</value>
+		</property>
+		<property name="ratio">
+			<value>4.20000029</value>
+		</property>
+		<property name="releaseTime">
+			<value>76</value>
+		</property>
+		<property name="gain">
+			<value>-6</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{b1176709-0980-43e8-a41a-8196934e7cd6}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>rate</value>
+		</property>
+		<property name="amount">
+			<value>6.5</value>
+		</property>
+	</object>
+</objects>
