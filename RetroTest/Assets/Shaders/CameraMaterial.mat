@@ -76,13 +76,16 @@ Material:
     - _Parallax: 0.02
     - _PixelSize: 170
     - _Pixelation: 1
+    - _ScanLineCount: 100
+    - _ScanLineIntensity: 0.743
+    - _ScanLineSpacing: 0.067
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.65882355, g: 0.8352941, b: 0.83773273, a: 1}
+    - _Color: {r: 0.73926157, g: 0.75624293, b: 0.54245585, a: 1}
     - _Color1: {r: 0, g: 0.25241137, b: 1, a: 1}
     - _Color2: {r: 1, g: 0.06979726, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
