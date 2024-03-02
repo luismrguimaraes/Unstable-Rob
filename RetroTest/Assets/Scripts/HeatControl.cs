@@ -65,9 +65,8 @@ public class HeatControl : MonoBehaviour
     {
         HeatLevel -= 0.1f*coolingSpeed*HeatSpeed;
         HeatLevel = Mathf.Clamp(HeatLevel, 0, 1);
-        
     }
-    
+
     private int FindCurrentLimit()
     {
         for(int i = 0; i < limits.Length; i++)
@@ -76,6 +75,22 @@ public class HeatControl : MonoBehaviour
                 return i;
         }
         return limits.Length;
+    }
+
+    // Event that accelerates the heat speed of the player
+    public void HeatZone()
+    {
+        HeatLevel += 0.02f*HeatSpeed;
+        HeatLevel = Mathf.Clamp(HeatLevel, 0, 1);
+        Debug.Log("HeatZone");
+    }
+
+    // Event that slows down the heat speed of the player
+    public void ColdZone()
+    {
+        HeatLevel -= 0.007f*HeatSpeed;
+        HeatLevel = Mathf.Clamp(HeatLevel, 0, 1);
+        Debug.Log("ColdZone");
     }
     
 
