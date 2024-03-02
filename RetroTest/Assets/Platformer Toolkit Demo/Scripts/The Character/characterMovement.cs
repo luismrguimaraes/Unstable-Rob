@@ -37,6 +37,7 @@ namespace GMTK.PlatformerToolkit {
         [Header("Current State")]
         public bool onGround;
         public bool pressingKey;
+        public bool invertedControls;
 
         private void Awake() {
             //Find the character's Rigidbody and ground detection script
@@ -50,6 +51,9 @@ namespace GMTK.PlatformerToolkit {
 
             if (movementLimiter.instance.CharacterCanMove) {
                 directionX = context.ReadValue<float>();
+                if (invertedControls) {
+                    directionX *= -1;
+                }
             }
         }
 
@@ -133,6 +137,10 @@ namespace GMTK.PlatformerToolkit {
             velocity.x = desiredVelocity.x;
 
             body.velocity = velocity;
+        }
+        
+        public void invertControlsEvent() {
+            this.invertedControls = !this.invertedControls;
         }
     }
 }
