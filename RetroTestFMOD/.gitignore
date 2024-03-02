@@ -18,3 +18,5 @@
 fmod_editor.log
 
 RetroTestFMOD/.unsaved/
+.unsaved/
+.cache
