@@ -45,6 +45,7 @@ public class FallingPlatform : MonoBehaviour
 
     private void Fall()
     {
+        collider.enabled = false;
         if (YVol > 2)
             Die();
         YVol += 0.01f;

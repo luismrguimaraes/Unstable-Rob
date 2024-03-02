@@ -9,7 +9,7 @@ public class CharacterPlatformGrabbing : MonoBehaviour
     public characterJump charJump;
     public float y_offset = -0.2f;
     public bool isGrabbing;
-    private bool touchingPlatform;
+    private int touchingPlatforms;
     public float grabCoyote = 0.5f;
     public float grabTimer = 0f;
     public float resetTimer = 0f;
@@ -35,11 +35,11 @@ public class CharacterPlatformGrabbing : MonoBehaviour
         if (jumpAction.IsPressed() && !isGrabbing && grabResetElapsed())
         {
             print("canGrab");
-            print(touchingPlatform);
+            print(touchingPlatforms);
             print("!On Ground");
             print(!charJump.onGround);
 
-            if (touchingPlatform){
+            if (touchingPlatforms>0){
                 isGrabbing = true;
             }
         }else{
@@ -61,11 +61,16 @@ public class CharacterPlatformGrabbing : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D c){
-        touchingPlatform = true;
+        touchingPlatforms++;
     }
 
     private void OnCollisionExit2D(Collision2D c){
-        touchingPlatform = false;
+        touchingPlatforms--;
+        if(touchingPlatforms<=0)
+        {
+            touchingPlatforms = 0;
+            isGrabbing = false;
+        }
     }
 
 }
