@@ -4314,6 +4314,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3785225066984480170, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 31.999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3785225066984480170, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 31.999998
+      objectReference: {fileID: 0}
     - target: {fileID: 4912838158002735064, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_Name
       value: Player (1)
@@ -4329,7 +4337,11 @@ PrefabInstance:
     - target: {fileID: 8015307100357677830, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b4e1d89ec7d2044acb13764d329e2e48, type: 3}
+      objectReference: {fileID: 21300000, guid: d00379c8619c94dfba6d173a364a4c54, type: 3}
+    - target: {fileID: 8015307100357677830, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+      propertyPath: m_DrawMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8829671123831029809, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_TagString
       value: Player
