@@ -25,7 +25,7 @@ public class PlayerEventBlock : MonoBehaviour
     private void Update()
     {
         Vector3 move = (targetPos - transform.localPosition);
-        Debug.Log(move);
+
         if(move.magnitude > 0.05f)
         {
             transform.localPosition += move * 5 * Time.deltaTime;
@@ -47,12 +47,13 @@ public class PlayerEventBlock : MonoBehaviour
             if(fastTime || medTime || slowTime)
             {
                 accTime = 0;
-                do
+                curDisplay = Random.Range(0, events.Length);
+                while (eventTaken.Contains(curDisplay))
                 {
                     curDisplay++;
                     if (curDisplay >= events.Length)
                         curDisplay = 0;
-                } while (eventTaken.Contains(curDisplay));
+                }
                 img.sprite = eventSprites[curDisplay];
             }
         }
