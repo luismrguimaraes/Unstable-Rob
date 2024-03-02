@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8083256134537407465}
   - component: {fileID: 6138876317943401731}
   - component: {fileID: -8623897355266959861}
+  - component: {fileID: 231437894879805575}
   m_Layer: 3
   m_Name: PlatformThatKILLSYou
   m_TagString: Untagged
@@ -122,7 +123,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1.1692702, y: 1.1692702}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -144,3 +145,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallTime: 1
+--- !u!114 &231437894879805575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5281321171002798236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49c8eb0636a8a7d4e8f53d6dfdfd8dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
