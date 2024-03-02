@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class PlayerProperties : MonoBehaviour
 {
     public bool inMusicZone;
+    public FMODUnity.EventReference deathSfx;
+    private bool dying = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,7 @@ public class PlayerProperties : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < -5)
+        if(!dying && transform.position.y < -5)
         {
             Die();
         }
@@ -25,8 +27,9 @@ public class PlayerProperties : MonoBehaviour
 
     public void Die()
     {
-        //diesound
-        Invoke(nameof(Restart), 1f);
+        dying = true;
+        FMODUnity.RuntimeManager.CreateInstance(deathSfx).start();
+        Invoke(nameof(Restart), 0.33f);
     }
 
     private void Restart()

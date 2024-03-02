@@ -17956,7 +17956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0c7962307064e43b2eb4b7076981f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerProps: {fileID: 1072700611}
+  playerProps: {fileID: 0}
   music:
     Guid:
       Data1: 1778695125
@@ -21792,6 +21792,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inMusicZone: 0
+  deathSfx:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!4 &864399731 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1056245121015343353, guid: 7a74adbb51a9cfe4ab3bbc180d472c69, type: 3}
@@ -27349,19 +27356,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8829671123831029809, guid: d268379a1a7544736a572440247f3b0c, type: 3}
   m_PrefabInstance: {fileID: 1281360950}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1072700611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072700600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 493ea7cc5820f4eed86f32ca05ab1ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inMusicZone: 0
 --- !u!1001 &1075302736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32086,6 +32080,10 @@ PrefabInstance:
       propertyPath: hurtSFX
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3355592375984407969, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+      propertyPath: orthographic size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3388242375037391730, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -32100,11 +32098,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5382592693294436940, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.22
+      value: -8.219999
       objectReference: {fileID: 0}
     - target: {fileID: 5382592693294436940, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.79
+      value: -1.8299999
       objectReference: {fileID: 0}
     - target: {fileID: 8015307100357677830, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_Sprite
@@ -32156,11 +32154,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9196117927542730768, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.22
+      value: -8.219999
       objectReference: {fileID: 0}
     - target: {fileID: 9196117927542730768, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.79
+      value: -1.8299999
       objectReference: {fileID: 0}
     - target: {fileID: 9196117927542730768, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32170,10 +32168,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 3388242375037391730, guid: d268379a1a7544736a572440247f3b0c, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8829671123831029809, guid: d268379a1a7544736a572440247f3b0c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1072700611}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d268379a1a7544736a572440247f3b0c, type: 3}
 --- !u!4 &1281633495 stripped
 Transform:
