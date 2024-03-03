@@ -6285,6 +6285,13 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   charJump: {fileID: 772289788503652291}
+  grabSFX:
+    Guid:
+      Data1: 1403957362
+      Data2: 1170064035
+      Data3: -458207838
+      Data4: 1478792744
+    Path: event:/Grab
   y_offset: -0.75
   isGrabbing: 0
   grabCoyote: 0.25
