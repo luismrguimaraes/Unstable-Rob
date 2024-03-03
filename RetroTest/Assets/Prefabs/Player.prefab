@@ -519,7 +519,7 @@ Transform:
   m_GameObject: {fileID: 3068492366874149047}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.22, y: -1.8299999, z: -5.5}
+  m_LocalPosition: {x: 1.1604729, y: 2.1163015, z: -5.497628}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6267,7 +6267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controls: {fileID: -944628639613478452, guid: f3c71efb2e74147528612863d177216c, type: 3}
   grabAction:
-    m_Name: 
+    m_Name: Grab
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: bc0b79f1-d1e0-433b-ace0-7c046e0808bf
