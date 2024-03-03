@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +12,7 @@ public class HeatControl : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private float BaseHeatSpeed;
     [SerializeField] private float HeatSpeed;
+    [SerializeField] private GameObject playerChar;
     private Vector3 originalPosition;
     public GameObject eventPrefab;
     private LinkedList<PlayerEventBlock> blocks = new LinkedList<PlayerEventBlock>();
@@ -17,6 +20,7 @@ public class HeatControl : MonoBehaviour
     private int nextLimit = 0;
     [SerializeField] private Transform bar;
     [SerializeField] private float coolingSpeed = 0.5f;
+    private bool followingPlayer;
 
     private void Start()
     {
@@ -29,6 +33,9 @@ public class HeatControl : MonoBehaviour
         HeatLevel += Time.deltaTime*HeatSpeed;
         HeatLevel = Mathf.Clamp(HeatLevel, 0, 1);
         image.fillAmount = HeatLevel;
+        // Update FMOD parameter
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("HeatLevel", HeatLevel);
+        
         if(HeatLevel > 0.5f)
         {
             float shakeAmount = (HeatLevel - 0.5f);
@@ -42,13 +49,16 @@ public class HeatControl : MonoBehaviour
         //handle spawning events
         if(nextLimit < limits.Length && HeatLevel >= limits[nextLimit])
         {
-            var obj = Instantiate(eventPrefab, gameObject.transform);
+            nextLimit++;
+            GameObject obj = Instantiate(eventPrefab, gameObject.transform);
             obj.transform.localPosition += new Vector3(90, 0, 0);
             blocks.AddLast(obj.GetComponent<PlayerEventBlock>());
             blocks.Last.Value.targetPos = blocks.Last.Value.transform.localPosition;
-            nextLimit++;
             foreach (PlayerEventBlock block in blocks)
                 block.targetPos += new Vector3(0, -100, 0);
+
+            FollowPlayerFirst(obj);
+
         } else if(nextLimit >= 1 && HeatLevel < limits[nextLimit-1])
         {
             blocks.First.Value.Remove();
@@ -56,8 +66,25 @@ public class HeatControl : MonoBehaviour
             nextLimit--;
         }
 
-        // Update FMOD parameter
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("HeatLevel", HeatLevel);
+        if (followingPlayer){
+            blocks.Last.Value.targetPos = playerChar.transform.position - new Vector3 (0, +25f, 0f);
+        }
+    }
+
+    public void FollowPlayerFirst(GameObject obj)
+    {
+        followingPlayer = true;
+        Vector3 previousPosition = blocks.Last.Value.targetPos;
+
+        blocks.Last.Value.targetPos = playerChar.transform.position;
+        StartCoroutine(FollowPlayerCoroutine(previousPosition));
+    }
+
+    IEnumerator FollowPlayerCoroutine(Vector3 previousPosition){
+        yield return new WaitForSeconds(2f + 2f);//blocks.Last.Value.gameObject.GetComponent<PlayerEventBlock>().eventEffectDelay);
+
+        followingPlayer = false;
+        blocks.Last.Value.targetPos = previousPosition;
     }
 
     // Event that cools the player down a bit

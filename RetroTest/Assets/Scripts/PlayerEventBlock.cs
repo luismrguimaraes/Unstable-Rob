@@ -14,10 +14,15 @@ public class PlayerEventBlock : MonoBehaviour
     private Image img;
     private bool locked = false;
     private EventsController eventsControl;
+    public float eventEffectDelay;
     public Vector3 targetPos;
+    private float animationTimeCounter;
+    private bool hasBlinked;
 
     private void Start()
     {
+        eventEffectDelay = 2f;
+
         img = GetComponent<Image>();
         eventsControl = FindFirstObjectByType<EventsController>();
         eventsTaken = FindFirstObjectByType<EvenTakenSingleton>();
@@ -35,11 +40,13 @@ public class PlayerEventBlock : MonoBehaviour
         if (locked)
             return;
         timeAlive += Time.deltaTime;
-        if(timeAlive > 2)
+        if(timeAlive > 2 + eventEffectDelay)
         {
             locked = true;
             eventsControl.AddEventByName(events[curDisplay]);
             eventsTaken.list.Add(curDisplay);
+
+            animationTimeCounter = 0;
         } else
         {
             accTime += Time.deltaTime;
@@ -56,6 +63,20 @@ public class PlayerEventBlock : MonoBehaviour
                         curDisplay = 0;
                 } while (eventsTaken.list.Contains(curDisplay));
                 img.sprite = eventSprites[curDisplay];
+            }
+        }
+
+        if (timeAlive > 2){
+            // blink animation
+            animationTimeCounter += Time.deltaTime;
+            if (animationTimeCounter >= eventEffectDelay/3){
+                if (!hasBlinked){
+                    img.enabled = false;
+                    hasBlinked = true;
+                }
+                else if (animationTimeCounter >= (eventEffectDelay/3 *2f)){
+                    img.enabled = true;
+                }
             }
         }
     }
