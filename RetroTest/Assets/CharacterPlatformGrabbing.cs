@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 public class CharacterPlatformGrabbing : MonoBehaviour
 {
     public InputActionAsset controls;
-    public InputAction grabAction;
     public InputAction jumpAction;
     public characterJump charJump;
     public FMODUnity.EventReference grabSFX;
@@ -16,8 +15,10 @@ public class CharacterPlatformGrabbing : MonoBehaviour
     public float grabTimer = 0f;
     public float resetTimer = 0f;
 
-    private void Start(){
-        grabAction = controls.FindAction("Grab");
+
+
+    private void Start()
+    {
         jumpAction = controls.FindAction("Jump");
     }
     private void Update()
@@ -32,16 +33,19 @@ public class CharacterPlatformGrabbing : MonoBehaviour
             grabTimer = 0;
             resetTimer = 0;
         }
-        if (grabAction.IsPressed() && !isGrabbing && grabResetElapsed())
+        if (jumpAction.IsPressed() && !isGrabbing && grabResetElapsed())
         {
-            if (touchingPlatforms>0){
-                isGrabbing = true;
 
-                // Play SFX
+            if (touchingPlatforms > 0)
+            {
+                isGrabbing = true;
                 FMODUnity.RuntimeManager.CreateInstance(grabSFX).start();
             }
-        }else{
-            if (grabAction.WasReleasedThisFrame() || jumpAction.WasPressedThisFrame()){
+        }
+        else
+        {
+            if (jumpAction.WasReleasedThisFrame())
+            {
                 isGrabbing = false;
             }
         }
@@ -58,13 +62,15 @@ public class CharacterPlatformGrabbing : MonoBehaviour
         return resetTimer >= grabCoyote;
     }
 
-    private void OnCollisionEnter2D(Collision2D c){
+    private void OnCollisionEnter2D(Collision2D c)
+    {
         touchingPlatforms++;
     }
 
-    private void OnCollisionExit2D(Collision2D c){
+    private void OnCollisionExit2D(Collision2D c)
+    {
         touchingPlatforms--;
-        if(touchingPlatforms<=0)
+        if (touchingPlatforms <= 0)
         {
             touchingPlatforms = 0;
             isGrabbing = false;
