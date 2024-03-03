@@ -12,11 +12,13 @@ public class FlipCameraEvent : Event {
     {
         data.virtualCamera.m_Lens.Dutch = 180;
         data.movementDataController._moveScript.invertControlsEvent();
+        data.UIcamera.transform.localRotation = Quaternion.Euler(0, 0, 180);
     }
 
     public override void End()
     {
         data.virtualCamera.m_Lens.Dutch = 0;
         data.movementDataController._moveScript.invertControlsEvent();
+        data.UIcamera.transform.localRotation = Quaternion.Euler(0, 0, 0);
     }
 }

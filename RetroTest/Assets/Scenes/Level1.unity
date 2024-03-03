@@ -19881,10 +19881,6 @@ PrefabInstance:
       propertyPath: hurtSFX
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 2507368798303175917, guid: d268379a1a7544736a572440247f3b0c, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3068492366874149047, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -19897,10 +19893,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3544128339943174889, guid: d268379a1a7544736a572440247f3b0c, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3920580780746452762, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: HeatLevel
       value: 0
@@ -19908,10 +19900,6 @@ PrefabInstance:
     - target: {fileID: 3920580780746452762, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: HeatSpeed
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3942680056567587374, guid: d268379a1a7544736a572440247f3b0c, type: 3}
-      propertyPath: m_Layer
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4863402695435184720, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: grabAction.m_Name
@@ -19933,30 +19921,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -5.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6478140829904336679, guid: d268379a1a7544736a572440247f3b0c, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7500096590591741305, guid: d268379a1a7544736a572440247f3b0c, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 8015307100357677830, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b4e1d89ec7d2044acb13764d329e2e48, type: 3}
-    - target: {fileID: 8154842713581665073, guid: d268379a1a7544736a572440247f3b0c, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8154842713581665073, guid: d268379a1a7544736a572440247f3b0c, type: 3}
-      propertyPath: m_TagString
-      value: HeatUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 8762081278190033097, guid: d268379a1a7544736a572440247f3b0c, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 8829671123831029809, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_TagString
       value: Player
