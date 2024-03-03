@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{fc23a4cc-649e-480d-87f9-3dbeac3712dd}">
+		<property name="name">
+			<value>IsJumping</value>
+		</property>
+		<relationship name="folder">
+			<destination>{f66ab62a-0794-457a-aae1-4e045d7c8c5e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{35acb095-9b1b-47b1-ace7-de8065e8594c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{35acb095-9b1b-47b1-ace7-de8065e8594c}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+		<property name="seekSpeedDescending">
+			<value>0.53999996185302734</value>
+		</property>
+		<property name="seekSpeedAsymmetric">
+			<value>true</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

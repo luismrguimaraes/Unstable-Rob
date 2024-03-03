@@ -66,6 +66,7 @@ namespace GMTK.PlatformerToolkit {
 
                 if (context.canceled) {
                     pressingJump = false;
+                    FMODUnity.RuntimeManager.StudioSystem.setParameterByName("IsJumping", 0f); 
                 }
             }
         }
