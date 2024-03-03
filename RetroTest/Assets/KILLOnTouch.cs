@@ -8,6 +8,7 @@ public class KILLOnTouch : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log(collision.gameObject.name);
             collision.gameObject.GetComponent<PlayerProperties>().Die();
         }
     }

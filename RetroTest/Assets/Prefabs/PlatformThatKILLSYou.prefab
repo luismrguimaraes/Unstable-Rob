@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6138876317943401731}
   - component: {fileID: -8623897355266959861}
   - component: {fileID: 231437894879805575}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: PlatformThatKILLSYou
   m_TagString: Untagged
   m_Icon: {fileID: 0}
