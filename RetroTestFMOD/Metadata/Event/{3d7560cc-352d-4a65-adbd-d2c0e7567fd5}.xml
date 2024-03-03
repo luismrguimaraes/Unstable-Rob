@@ -105,6 +105,7 @@
 		<relationship name="effects">
 			<destination>{7639adf5-a65f-4de1-9d4a-ed748cea1351}</destination>
 			<destination>{9909b6d1-9264-4a17-b5d3-10cbd288c839}</destination>
+			<destination>{9f819c00-6a5c-4fb6-9b8f-d8316730f6b1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{a0a79808-c015-4578-9c63-449dfb96f85a}" />
@@ -138,6 +139,14 @@
 		<property name="frequencyA">
 			<value>1200</value>
 		</property>
+	</object>
+	<object class="ProxyEffect" id="{9f819c00-6a5c-4fb6-9b8f-d8316730f6b1}">
+		<property name="inputFormat">
+			<value>0</value>
+		</property>
+		<relationship name="preset">
+			<destination>{3491bcfa-219b-4ab1-8c05-24463a997bff}</destination>
+		</relationship>
 	</object>
 	<object class="AutomationPoint" id="{25c40888-b8b6-49f8-908d-18f90adb31e3}">
 		<property name="position">

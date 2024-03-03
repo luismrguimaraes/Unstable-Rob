@@ -186,6 +186,7 @@
 			<destination>{538c6ae8-35aa-4044-803c-24399b5bdae8}</destination>
 			<destination>{0e6de939-846e-45f6-88dd-e91dc004f8ec}</destination>
 			<destination>{66a77d4f-02cd-404c-9ce6-a89736cbc56d}</destination>
+			<destination>{c01f5f2e-02bb-49c4-acc5-cd06ef522422}</destination>
 			<destination>{c0b04132-09cc-4f97-85b7-a1f0a65a4feb}</destination>
 		</relationship>
 	</object>
@@ -279,6 +280,14 @@
 		<property name="qualityA">
 			<value>0.676091015</value>
 		</property>
+	</object>
+	<object class="ProxyEffect" id="{c01f5f2e-02bb-49c4-acc5-cd06ef522422}">
+		<property name="inputFormat">
+			<value>0</value>
+		</property>
+		<relationship name="preset">
+			<destination>{3491bcfa-219b-4ab1-8c05-24463a997bff}</destination>
+		</relationship>
 	</object>
 	<object class="SpatialiserEffect" id="{c0b04132-09cc-4f97-85b7-a1f0a65a4feb}">
 		<property name="minimumExtent">
