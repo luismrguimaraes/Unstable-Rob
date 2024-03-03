@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using FMODUnityResonance;
 using UnityEngine;
 
@@ -44,8 +45,11 @@ public class FallingPlatform : MonoBehaviour
             InvokeRepeating("Fall", nextshake, 0.01f);
 
             // Sfx
-            if (playSfx)
-                FMODUnity.RuntimeManager.CreateInstance(fallSfx).start();
+            if (playSfx){
+                FMOD.Studio.EventInstance sfxInstance = FMODUnity.RuntimeManager.CreateInstance(fallSfx);
+                sfxInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+                sfxInstance.start();
+            }
         }
         else
             Invoke("Shake", nextshake);
