@@ -16914,6 +16914,10 @@ PrefabInstance:
       value: HeatUI
       objectReference: {fileID: 0}
     - target: {fileID: 8679421114327490677, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
+      propertyPath: playerChar
+      value: 
+      objectReference: {fileID: 8829671123831029809}
+    - target: {fileID: 8679421114327490677, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
       propertyPath: BaseHeatSpeed
       value: 0.05
       objectReference: {fileID: 0}
