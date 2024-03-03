@@ -1264,7 +1264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 52.504143
+      value: 54.17
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1301,6 +1301,10 @@ PrefabInstance:
     - target: {fileID: 4128815730277953517, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_Name
       value: Water Cooler
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968464407126539884, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: waterPercentage
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2671,6 +2675,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1056245121015343353, guid: 3193e3043e1e9724d905ba71e073ea10, type: 3}
   m_PrefabInstance: {fileID: 1850101523}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &121383822
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 107.763855
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128815730277953517, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: m_Name
+      value: Water Cooler (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968464407126539884, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: waterPercentage
+      value: 40
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
 --- !u!1001 &123591477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12882,11 +12947,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 244.81496
+      value: 250.84
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.261246
+      value: 10.23
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12923,6 +12988,10 @@ PrefabInstance:
     - target: {fileID: 4128815730277953517, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_Name
       value: Water Cooler (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968464407126539884, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: waterPercentage
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31361,7 +31430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3355592375984407969, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: orthographic size
-      value: 8
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 3388242375037391730, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_IsActive
@@ -31385,7 +31454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5382592693294436940, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8299999
+      value: -1.6499999
       objectReference: {fileID: 0}
     - target: {fileID: 6266357064157699123, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_Enabled
@@ -31457,7 +31526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9196117927542730768, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8299999
+      value: -1.6499999
       objectReference: {fileID: 0}
     - target: {fileID: 9196117927542730768, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -51897,3 +51966,4 @@ SceneRoots:
   - {fileID: 1126513554}
   - {fileID: 47656005}
   - {fileID: 519170935}
+  - {fileID: 121383822}

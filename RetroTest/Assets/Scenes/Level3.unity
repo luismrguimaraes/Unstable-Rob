@@ -1152,7 +1152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.048084
+      value: 29.11
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13237,11 +13237,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 247.55588
+      value: 214.69
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.434414
+      value: 33.33
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13278,6 +13278,10 @@ PrefabInstance:
     - target: {fileID: 4128815730277953517, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_Name
       value: Water Cooler (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968464407126539884, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: waterPercentage
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26874,11 +26878,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 133.57898
+      value: 131.86
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.962143
+      value: 29.26
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26915,6 +26919,10 @@ PrefabInstance:
     - target: {fileID: 4128815730277953517, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_Name
       value: Water Cooler (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968464407126539884, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: waterPercentage
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30939,7 +30947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.981312
+      value: 15.28
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30984,6 +30992,10 @@ PrefabInstance:
     - target: {fileID: 4968464407126539884, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: waterRemaining
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968464407126539884, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: waterPercentage
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
