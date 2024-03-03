@@ -257,7 +257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.92}
+  m_AnchoredPosition: {x: 0, y: 0.9199829}
   m_SizeDelta: {x: 857.46, y: 553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2773898079192368654
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2280652109466038990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,6 +339,7 @@ MonoBehaviour:
   image: {fileID: 6903988802985253442}
   BaseHeatSpeed: 0
   HeatSpeed: 0.1
+  playerChar: {fileID: 0}
   eventPrefab: {fileID: 4692404157832365194, guid: b03e225e435583b44a00d103579a8d08, type: 3}
   limits:
   - 0.25

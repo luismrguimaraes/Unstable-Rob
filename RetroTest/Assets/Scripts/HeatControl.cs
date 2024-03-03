@@ -67,7 +67,7 @@ public class HeatControl : MonoBehaviour
         }
 
         if (followingPlayer){
-            blocks.Last.Value.targetPos = playerChar.transform.position - new Vector3 (0, +25f, 0f);
+            blocks.Last.Value.targetPos = playerChar.transform.position - new Vector3 (0, +25f, 0f); //- new Vector3(15, 0, 0)*(blocks.Count-1);
         }
     }
 

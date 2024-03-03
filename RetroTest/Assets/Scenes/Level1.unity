@@ -20029,6 +20029,10 @@ PrefabInstance:
       propertyPath: hurtSFX
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2461857494200893471, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3068492366874149047, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_IsActive
       value: 1
