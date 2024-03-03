@@ -131,6 +131,137 @@ MonoBehaviour:
     m_FrequencyGain: 0
     m_Duration: 0
     m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!1 &1612698867887020344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4835797389579300614}
+  - component: {fileID: 6266357064157699123}
+  - component: {fileID: 4539442958591268119}
+  m_Layer: 0
+  m_Name: UI Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4835797389579300614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612698867887020344}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9196117927542730768}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &6266357064157699123
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612698867887020344}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 4
+  m_BackGroundColor: {r: 0.8196079, g: 0.9568628, b: 0.9686275, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
+  orthographic: 1
+  orthographic size: 8
+  m_Depth: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 32
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 0
+  m_HDR: 0
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!114 &4539442958591268119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612698867887020344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66814c2938eb1e645900a90d1fe34360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isUI: 1
+  material: {fileID: 2100000, guid: 526bf8600df71f6408adce422961d13e, type: 2}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0.65882355, g: 0.8352941, b: 0.9283352, a: 1}
+    key1: {r: 0.65882355, g: 0.8352941, b: 0.70980394, a: 1}
+    key2: {r: 1, g: 0.4999998, b: 0, a: 1}
+    key3: {r: 1, g: 0, b: 0, a: 1}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 19853
+    ctime2: 37972
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 22937
+    atime2: 36815
+    atime3: 65535
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 4
+    m_NumAlphaKeys: 4
+  heatControl: {fileID: 3920580780746452762}
+  digitalGlitch: {fileID: 0}
+  analogGlitch: {fileID: 0}
 --- !u!1 &2768973379115001071
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +523,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4835797389579300614}
   - {fileID: 5995214962830147913}
   m_Father: {fileID: 2634910637165770222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -505,6 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66814c2938eb1e645900a90d1fe34360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUI: 1
   material: {fileID: 2100000, guid: 526bf8600df71f6408adce422961d13e, type: 2}
   gradient:
     serializedVersion: 2
@@ -16689,7 +16822,7 @@ PrefabInstance:
     - target: {fileID: 2773898079192368654, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 3355592375984407969}
+      objectReference: {fileID: 6266357064157699123}
     - target: {fileID: 4361398783993457098, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
       propertyPath: playerEventData.camera
       value: 

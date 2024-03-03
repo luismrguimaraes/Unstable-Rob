@@ -48,7 +48,7 @@ public class HeatControl : MonoBehaviour
             blocks.Last.Value.targetPos = blocks.Last.Value.transform.localPosition;
             nextLimit++;
             foreach (PlayerEventBlock block in blocks)
-                block.targetPos += new Vector3(0, -60, 0);
+                block.targetPos += new Vector3(0, -100, 0);
         } else if(nextLimit >= 1 && HeatLevel < limits[nextLimit-1])
         {
             blocks.First.Value.Remove();

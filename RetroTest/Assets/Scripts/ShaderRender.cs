@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ShaderRender : MonoBehaviour
 {
+    public bool isUI = false;
     public Material material;
     public Gradient gradient;
     public HeatControl heatControl;
@@ -22,6 +23,8 @@ public class ShaderRender : MonoBehaviour
        float level = heatControl.HeatLevel;
         Color matColor = gradient.Evaluate(level);
         material.SetColor("_Color", matColor);
+        
+        if (isUI) return;
         
         level = Mathf.Pow(heatControl.HeatLevel, 3);
         digitalGlitch.intensity = Mathf.Lerp(0, 0.04f, level);
