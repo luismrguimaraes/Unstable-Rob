@@ -3,6 +3,7 @@ Shader "Custom/DiscreteLevels"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _PixelateToggle ("Apply Pixelation", Float) = 0.0
         _PixelSize ("Pixel Size", Float) = 10.0
         _Levels ("Number of Levels", Float) = 5
         _Color ("Color", Color) = (0, 0, 1, 1) // Default to blue
@@ -37,6 +38,7 @@ Shader "Custom/DiscreteLevels"
             float _Levels;
             fixed4 _Color;
             float2 _MainTex_TexelSize;
+            float _PixelateToggle;
             
             v2f vert (appdata v)
             {
@@ -48,10 +50,14 @@ Shader "Custom/DiscreteLevels"
             
             fixed4 frag (v2f i) : SV_Target
             {
-                // Pixelation
                 float2 uv = i.uv;
-                uv *= _PixelSize;
-                uv = floor(uv) / _PixelSize;
+                
+                // Pixelation
+                if (_PixelateToggle > 0.5)
+                {
+                    uv *= _PixelSize;
+                    uv = floor(uv) / _PixelSize;
+                }
                 
                 // Discrete Levels
                 fixed4 color = tex2D(_MainTex, uv);
