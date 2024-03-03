@@ -171,6 +171,7 @@ namespace GMTK.PlatformerToolkit {
         
         public void invertControlsEvent() {
             this.invertedControls = !this.invertedControls;
+            directionX *= -1;
         }
         
         public void switchDecceleration() {
