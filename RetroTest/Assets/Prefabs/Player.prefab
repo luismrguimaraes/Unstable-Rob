@@ -6266,15 +6266,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controls: {fileID: -944628639613478452, guid: f3c71efb2e74147528612863d177216c, type: 3}
-  grabAction:
-    m_Name: Grab
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: bc0b79f1-d1e0-433b-ace0-7c046e0808bf
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   jumpAction:
     m_Name: Jump
     m_Type: 0
@@ -6294,7 +6285,7 @@ MonoBehaviour:
     Path: event:/Grab
   y_offset: -0.75
   isGrabbing: 0
-  grabCoyote: 0.25
+  grabCoyote: 0.5
   grabTimer: 0
   resetTimer: 0
 --- !u!1 &8201661299923415846
@@ -16922,6 +16913,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeatUI
       objectReference: {fileID: 0}
+    - target: {fileID: 8679421114327490677, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
+      propertyPath: playerChar
+      value: 
+      objectReference: {fileID: 8829671123831029809}
     - target: {fileID: 8679421114327490677, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
       propertyPath: BaseHeatSpeed
       value: 0.05
