@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="MixerReturn" id="{ca86bce4-440f-4332-a0f5-263c89556fe4}">
+		<property name="volume">
+			<value>-14</value>
+		</property>
 		<property name="overridingInputFormat">
 			<value>2</value>
 		</property>
@@ -20,11 +23,37 @@
 	<object class="MixerBusEffectChain" id="{69935038-3faf-47bb-b752-a2e42e5fd90e}">
 		<relationship name="effects">
 			<destination>{ab896e4d-57b7-47aa-b443-67dc294cfda9}</destination>
+			<destination>{18424c19-7c22-4b1f-901d-e3c0acf3550a}</destination>
 			<destination>{04946a79-24de-41a7-a860-215b5af53ffa}</destination>
+			<destination>{06e309f3-06ef-47b4-8364-b7cb65d0947d}</destination>
+			<destination>{c53d08cb-127b-4098-a1f5-36a09690dcf1}</destination>
+			<destination>{19cfef12-e157-4569-b46a-55db18be22ec}</destination>
+			<destination>{28a4f717-57a5-4440-9fca-1ca02d833034}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{40612db4-2965-4523-9f74-a906d19d1ac1}" />
 	<object class="SFXReverbEffect" id="{ab896e4d-57b7-47aa-b443-67dc294cfda9}">
+		<property name="decayTime">
+			<value>550</value>
+		</property>
+		<property name="earlyDelay">
+			<value>98</value>
+		</property>
+		<property name="lateDelay">
+			<value>62</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>21</value>
+		</property>
+		<property name="diffusion">
+			<value>27</value>
+		</property>
+		<property name="highCut">
+			<value>3600</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>82</value>
+		</property>
 		<property name="wetLevel">
 			<value>0</value>
 		</property>
@@ -32,5 +61,42 @@
 			<value>-80</value>
 		</property>
 	</object>
+	<object class="MultibandEqEffect" id="{18424c19-7c22-4b1f-901d-e3c0acf3550a}">
+		<property name="filterTypeA">
+			<value>4</value>
+		</property>
+		<property name="frequencyA">
+			<value>340</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{04946a79-24de-41a7-a860-215b5af53ffa}" />
+	<object class="DistortionEffect" id="{06e309f3-06ef-47b4-8364-b7cb65d0947d}">
+		<property name="level">
+			<value>0.979999959</value>
+		</property>
+	</object>
+	<object class="LimiterEffect" id="{c53d08cb-127b-4098-a1f5-36a09690dcf1}">
+		<property name="ceiling">
+			<value>-5.9000001</value>
+		</property>
+		<property name="release">
+			<value>1</value>
+		</property>
+		<property name="linkChannels">
+			<value>false</value>
+		</property>
+	</object>
+	<object class="ThreeEQEffect" id="{19cfef12-e157-4569-b46a-55db18be22ec}">
+		<property name="highGain">
+			<value>-3</value>
+		</property>
+		<property name="highCrossover">
+			<value>8000</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{28a4f717-57a5-4440-9fca-1ca02d833034}">
+		<property name="gain">
+			<value>-22.5</value>
+		</property>
+	</object>
 </objects>

@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 
@@ -7,6 +8,7 @@ namespace GMTK.PlatformerToolkit {
 
     public class characterGround : MonoBehaviour {
         private bool onGround;
+        [SerializeField] FMODUnity.EventReference landSfxReference;
 
         [Header("Collider Settings")]
         [SerializeField][Tooltip("Length of the ground-checking collider")] private float groundLength = 0.95f;
@@ -17,8 +19,14 @@ namespace GMTK.PlatformerToolkit {
 
 
         private void Update() {
+            bool previousOnGround = onGround;
+
             //Determine if the player is stood on objects on the ground layer, using a pair of raycasts
             onGround = Physics2D.Raycast(transform.position + colliderOffset, Vector2.down, groundLength, groundLayer) || Physics2D.Raycast(transform.position - colliderOffset, Vector2.down, groundLength, groundLayer);
+            
+            if (!previousOnGround && onGround){
+                FMODUnity.RuntimeManager.CreateInstance(landSfxReference).start();
+            }
         }
 
         private void OnDrawGizmos() {

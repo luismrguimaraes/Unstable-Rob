@@ -11530,6 +11530,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76820f059641d412c98ca5c80d66133c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  landSfxReference:
+    Guid:
+      Data1: 1031102668
+      Data2: 1248146733
+      Data3: -1059930707
+      Data4: -713074969
+    Path: event:/Land
   groundLength: 0.62
   colliderOffset: {x: 0.49, y: 0, z: 0}
   groundLayer:

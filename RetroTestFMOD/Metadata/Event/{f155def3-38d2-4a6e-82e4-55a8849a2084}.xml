@@ -53,7 +53,7 @@
 			<destination>{cc6fe91f-f3ed-4f79-8bc4-2120f90e244b}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{646aa2c1-2ab7-4139-87e0-473233e664e5}</destination>
+			<destination>{13b74cbf-fdd0-4f95-853e-39df7eb63227}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{8c02b82a-8142-4615-a495-99f36d01fde5}" />
@@ -192,7 +192,7 @@
 	</object>
 	<object class="MultibandEqEffect" id="{66a77d4f-02cd-404c-9ce6-a89736cbc56d}">
 		<property name="frequencyA">
-			<value>1900</value>
+			<value>2400</value>
 		</property>
 		<property name="qualityA">
 			<value>0.676091015</value>
@@ -216,7 +216,7 @@
 	</object>
 	<object class="AutomationPoint" id="{d03fa200-1b7f-4558-9836-37f18e66af5b}">
 		<property name="position">
-			<value>0.0039422353021695989</value>
+			<value>0.03125</value>
 		</property>
 		<property name="value">
 			<value>1</value>

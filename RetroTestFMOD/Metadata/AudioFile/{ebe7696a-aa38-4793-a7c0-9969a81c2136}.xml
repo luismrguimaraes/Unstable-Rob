@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ebe7696a-aa38-4793-a7c0-9969a81c2136}">
+		<property name="assetPath">
+			<value>AirDash.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>22.0499992</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.120907029478458</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{cd1ef532-5eb8-48d5-a90b-58faea9d194a}</destination>
+		</relationship>
+	</object>
+</objects>
