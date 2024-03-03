@@ -21,6 +21,7 @@ public class WaterCooling : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         if (waterPercentage > 0)
         {
             RefreshSprite();
@@ -71,6 +72,13 @@ public class WaterCooling : MonoBehaviour
     // refresh sprite
     public void RefreshSprite()
     {
+        
+        if (infiniteWater)
+        {
+            GetComponent<SpriteRenderer>().sprite = waterTankSprites[19];
+        }
+
+        else{
         // Checks the water level, and applies the correct sprite (WaterTank_X) where X is from 0 (full) to 18 (empty), uniformly distributed
         int spriteIndex = (int) Mathf.Floor((float)waterPercentage/100*18);
 
@@ -84,7 +92,6 @@ public class WaterCooling : MonoBehaviour
         {
             Debug.Log("Error: Sprite index out of range (" + spriteIndex + ").");
         }
-    
-        
+        }
     }
 }
