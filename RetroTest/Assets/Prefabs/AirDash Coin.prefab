@@ -105,7 +105,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   triggerCollider: {fileID: 594977847400443817}
-  respawnTime: 0.5
+  respawnTime: 1
   cooldown: 0
   targetOrtoSize: 13.5
   forceMultiplier: 1

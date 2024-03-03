@@ -122,7 +122,7 @@
 			<value>volume</value>
 		</property>
 		<property name="amount">
-			<value>9</value>
+			<value>6</value>
 		</property>
 	</object>
 	<object class="FadeCurve" id="{1b234aa2-4e62-40cc-b5d4-aba4e3c98fb6}">
