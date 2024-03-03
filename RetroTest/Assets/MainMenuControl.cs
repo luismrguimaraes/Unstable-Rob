@@ -21,12 +21,14 @@ public class MainMenuControl : MonoBehaviour
     bool up=false;
     bool selected=false;
 
+    public FMODUnity.EventReference UISfx;
+
     private void Start()
     {
         controls.FindActionMap("UI").Enable();
         navigation = controls.FindActionMap("UI").FindAction("Navigate");
         confirm = controls.FindActionMap("UI").FindAction("Select");
-        InvokeRepeating(nameof(CheckInputs), 0f, 0.10f);
+        InvokeRepeating(nameof(CheckInputs), 0f, 0.20f);
 
     }
 
@@ -50,10 +52,12 @@ public class MainMenuControl : MonoBehaviour
         if (down)
         {
             UpdateButts(1);
+            FMODUnity.RuntimeManager.CreateInstance(UISfx).start();
         }
         else if(up)
         {
             UpdateButts(-1);
+            FMODUnity.RuntimeManager.CreateInstance(UISfx).start();
         } else if(selected)
         {
             switch(buttonSelected)
@@ -65,12 +69,15 @@ public class MainMenuControl : MonoBehaviour
                     Application.Quit();
                     break;
             }
+            FMODUnity.RuntimeManager.CreateInstance(UISfx).start();
         } else if(buttonSelected == 0 && right)
         {
             UpdateLevels(1);
+            FMODUnity.RuntimeManager.CreateInstance(UISfx).start();
         } else if(buttonSelected == 0 && left)
         {
             UpdateLevels(-1);
+            FMODUnity.RuntimeManager.CreateInstance(UISfx).start();
         }
         down = false;
         up = false;

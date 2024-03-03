@@ -1193,6 +1193,13 @@ MonoBehaviour:
   - {fileID: 1955402866}
   - {fileID: 1505054218}
   buttonSelected: 0
+  UISfx:
+    Guid:
+      Data1: -576881609
+      Data2: 1270795545
+      Data3: 2020005556
+      Data4: 70922429
+    Path: event:/UI
 --- !u!114 &1300112868
 MonoBehaviour:
   m_ObjectHideFlags: 0
