@@ -7,7 +7,7 @@ public class PlayerEventBlock : MonoBehaviour
 {
     public Sprite[] eventSprites;
     public string[] events;
-    static private List<int> eventTaken = new List<int>();
+    private EvenTakenSingleton eventsTaken;
     private float timeAlive;
     private float accTime;
     private int curDisplay;
@@ -20,6 +20,7 @@ public class PlayerEventBlock : MonoBehaviour
     {
         img = GetComponent<Image>();
         eventsControl = FindFirstObjectByType<EventsController>();
+        eventsTaken = FindFirstObjectByType<EvenTakenSingleton>();
         curDisplay = Random.Range(0, events.Length);
     }
 
@@ -38,7 +39,7 @@ public class PlayerEventBlock : MonoBehaviour
         {
             locked = true;
             eventsControl.AddEventByName(events[curDisplay]);
-            eventTaken.Add(curDisplay);
+            eventsTaken.list.Add(curDisplay);
         } else
         {
             accTime += Time.deltaTime;
@@ -53,14 +54,14 @@ public class PlayerEventBlock : MonoBehaviour
                     curDisplay++;
                     if (curDisplay >= events.Length)
                         curDisplay = 0;
-                } while (eventTaken.Contains(curDisplay));
+                } while (eventsTaken.list.Contains(curDisplay));
                 img.sprite = eventSprites[curDisplay];
             }
         }
     }
     public void Remove()
     {
-        eventTaken.Remove(curDisplay);
+        eventsTaken.list.Remove(curDisplay);
         eventsControl.RemoveEventByName(events[curDisplay]);
         targetPos += new Vector3(-100, 0, 0);
         Invoke("Die", 0.5f);

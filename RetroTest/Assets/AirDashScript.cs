@@ -1,18 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnityResonance;
 using UnityEngine;
 
 public class AirDashScript : MonoBehaviour
-
-
 // Script that controls each AirDash Coin.
 // When the character colides with coin, the character's upwards velocity is increased by 5
-
-
-
-
 {
-
     public LayerMask Player; // The layer that the player is on
     public Collider2D triggerCollider;
 
@@ -24,6 +18,8 @@ public class AirDashScript : MonoBehaviour
     // force multipler variable
     public float forceMultiplier = 1f;
 
+    // SFX
+    public FMODUnity.EventReference airDashSfx;
 
     public void Update()
     {
@@ -41,12 +37,11 @@ public class AirDashScript : MonoBehaviour
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
             // calling the airdash function from the player's script
-            player.GetComponent<GMTK.PlatformerToolkit.characterMovement>().AirDash(forceMultiplier);
+            player.GetComponent<GMTK.PlatformerToolkit.characterMovement>().AirDash(forceMultiplier, airDashSfx);
 
             // Disable rendering only (not the object itself)
             GetComponent<SpriteRenderer>().enabled = false;
             cooldown = respawnTime*2;
-
         }
 
         // Floating animation

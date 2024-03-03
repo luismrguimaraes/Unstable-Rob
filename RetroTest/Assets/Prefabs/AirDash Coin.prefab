@@ -105,6 +105,13 @@ MonoBehaviour:
   respawnTime: 0.5
   cooldown: 0
   forceMultiplier: 1
+  airDashSfx:
+    Guid:
+      Data1: 315814590
+      Data2: 1250076892
+      Data3: -2079985746
+      Data4: -773676961
+    Path: event:/AirDash
 --- !u!58 &7479600815634580475
 CircleCollider2D:
   m_ObjectHideFlags: 0

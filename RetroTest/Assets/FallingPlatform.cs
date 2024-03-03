@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
+using FMODUnityResonance;
 using UnityEngine;
 
 public class FallingPlatform : MonoBehaviour
 {
     public float fallTime = 1;
+    public FMODUnity.EventReference fallSfx;
+    public bool playSfx;
     private float ShakeAcc = 0;
     private float YVol = 0;
     private Rigidbody2D rb;
@@ -29,16 +33,24 @@ public class FallingPlatform : MonoBehaviour
 
     private void Shake()
     {
-        //Debug.Log("shaking aaa");
         Vector2 offset = new Vector2(0, Random.Range(-0.1f, 0.05f));
         collider.offset -= offset;
         transform.position += new Vector3(0,offset.y,0);
 
         float nextshake = fallTime / 6 - ShakeAcc / 6;
         ShakeAcc += nextshake;
-        //Debug.Log(ShakeAcc);
-        if (ShakeAcc+0.001f >= fallTime)
+
+        if (ShakeAcc+0.001f >= fallTime){
+            // Start Falling
             InvokeRepeating("Fall", nextshake, 0.01f);
+
+            // Sfx
+            if (playSfx){
+                FMOD.Studio.EventInstance sfxInstance = FMODUnity.RuntimeManager.CreateInstance(fallSfx);
+                sfxInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+                sfxInstance.start();
+            }
+        }
         else
             Invoke("Shake", nextshake);
     }
