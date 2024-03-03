@@ -9,8 +9,11 @@ public class WaterCooling : MonoBehaviour
     public LayerMask Player; // The layer that the player is on
     public Collider2D triggerCollider;
 
-    // waterRemaining
-    public double waterRemaining = 2;
+    // water 
+    public double waterPercentage = 50;
+
+    // List of sprites for the water tank
+    public Sprite[] waterTankSprites;
 
     // infiniteWater boolean
     public bool infiniteWater;
@@ -19,6 +22,11 @@ public class WaterCooling : MonoBehaviour
     void Start()
     {
         
+        if (waterPercentage > 0)
+        {
+            RefreshSprite();
+        }
+        
     }
 
     // Update is called once per frame
@@ -26,7 +34,7 @@ public class WaterCooling : MonoBehaviour
     {
 
             
-        if (triggerCollider.IsTouchingLayers(Player)){
+        if (triggerCollider.IsTouchingLayers(Player) && waterPercentage > 0){
             // Find the player object
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
@@ -38,19 +46,52 @@ public class WaterCooling : MonoBehaviour
 
             // reduce the cooling time a bit
             if (!infiniteWater){
-                waterRemaining -= 1*Time.deltaTime;
+                waterPercentage -= 10*Time.deltaTime;
             }
 
 
         }
 
-        if (waterRemaining <= 0 && !infiniteWater)
+        // // Destroy the object if the water is empty
+        // if (waterRemaining <= 0 && !infiniteWater)
+        // {
+        //     Destroy(gameObject);
+        // }
+
+        // Refresh sprite
+        if (waterPercentage > 0)
         {
-            Destroy(gameObject);
+            RefreshSprite();
         }
 
         // Floating animation
         //transform.position += new Vector3(0, Mathf.Sin(Time.time * 3) * 0.01f, 0);
         
+    }
+
+    // refresh sprite
+    public void RefreshSprite()
+    {
+        
+        if (infiniteWater)
+        {
+            GetComponent<SpriteRenderer>().sprite = waterTankSprites[19];
+        }
+
+        else{
+        // Checks the water level, and applies the correct sprite (WaterTank_X) where X is from 0 (full) to 18 (empty), uniformly distributed
+        int spriteIndex = (int) Mathf.Floor((float)waterPercentage/100*18);
+
+        // Load the sprite WaterTank_X from the array
+        Debug.Log("Sprite Index: " + spriteIndex);
+        try
+        {
+            GetComponent<SpriteRenderer>().sprite = waterTankSprites[spriteIndex];
+        }
+        catch (System.Exception)
+        {
+            Debug.Log("Error: Sprite index out of range (" + spriteIndex + ").");
+        }
+        }
     }
 }
