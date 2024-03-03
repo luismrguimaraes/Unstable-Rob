@@ -8,6 +8,7 @@ using UnityEngine;
 [System.Serializable]
 public class EventData {
     public Camera camera;
+    public Camera UIcamera;
     public CinemachineVirtualCamera virtualCamera;
     public GameObject player;
     public CharacterMovementDataController movementDataController;

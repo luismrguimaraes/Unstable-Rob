@@ -40,6 +40,7 @@ namespace GMTK.PlatformerToolkit {
         public bool invertedControls;
         
         private float previousDeceleration;
+        private float previousAirDeceleration;
 
         private void Awake() {
             //Find the character's Rigidbody and ground detection script
@@ -176,10 +177,13 @@ namespace GMTK.PlatformerToolkit {
             float lowDeceleration = 3f;
             if (this.maxDecceleration == lowDeceleration) {
                 this.maxDecceleration = previousDeceleration;
+                this.maxAirDeceleration = previousAirDeceleration;
             }
             else {
                 previousDeceleration = this.maxDecceleration;
+                previousAirDeceleration = this.maxAirDeceleration;
                 this.maxDecceleration = lowDeceleration;
+                this.maxAirDeceleration = lowDeceleration;
             }
         }
     }

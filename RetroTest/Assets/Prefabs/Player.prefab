@@ -16868,10 +16868,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2101075223272443430, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 2101075223272443430, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -16895,6 +16891,10 @@ PrefabInstance:
       propertyPath: playerEventData.player
       value: 
       objectReference: {fileID: 8829671123831029809}
+    - target: {fileID: 4361398783993457098, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
+      propertyPath: playerEventData.UIcamera
+      value: 
+      objectReference: {fileID: 6266357064157699123}
     - target: {fileID: 4361398783993457098, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
       propertyPath: playerEventData.darkness
       value: 
