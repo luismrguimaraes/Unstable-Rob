@@ -12739,11 +12739,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 215.75342
+      value: 187.54
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.921547
+      value: 10.18
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12780,6 +12780,14 @@ PrefabInstance:
     - target: {fileID: 4128815730277953517, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_Name
       value: Water Cooler
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968464407126539884, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: infiniteWater
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968464407126539884, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: waterPercentage
+      value: 99
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14315,7 +14323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.455755
+      value: -3.7
       objectReference: {fileID: 0}
     - target: {fileID: 1193986390434717429, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14352,6 +14360,10 @@ PrefabInstance:
     - target: {fileID: 4128815730277953517, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
       propertyPath: m_Name
       value: Water Cooler (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968464407126539884, guid: d557cf71008dd4dac9e1344be807d037, type: 3}
+      propertyPath: waterPercentage
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
