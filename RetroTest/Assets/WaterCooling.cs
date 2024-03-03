@@ -17,6 +17,10 @@ public class WaterCooling : MonoBehaviour
 
     // infiniteWater boolean
     public bool infiniteWater;
+    public FMODUnity.EventReference waterCoolerSFX;
+
+    // bool inside
+    public bool inside = false;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +54,22 @@ public class WaterCooling : MonoBehaviour
             }
 
 
+
+
+            // play SFX on entering the water (and dont play it again until the player leaves)
+            if (!inside)
+            {
+                FMODUnity.RuntimeManager.CreateInstance(waterCoolerSFX).start();
+                inside = true;
+            }
         }
+
+        else
+        {
+            inside = false;
+        }
+
+
 
         // // Destroy the object if the water is empty
         // if (waterRemaining <= 0 && !infiniteWater)

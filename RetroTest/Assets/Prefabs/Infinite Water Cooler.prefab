@@ -125,6 +125,13 @@ MonoBehaviour:
   - {fileID: -1397797871, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
   - {fileID: 21300000, guid: de1fab865148f4b61a7ff725cffd3bdf, type: 3}
   infiniteWater: 1
+  waterCoolerSFX:
+    Guid:
+      Data1: 604555449
+      Data2: 1090948884
+      Data3: -1280674175
+      Data4: 1217931760
+    Path: event:/WaterCooling
 --- !u!61 &8780402174954193716
 BoxCollider2D:
   m_ObjectHideFlags: 0
