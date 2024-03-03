@@ -120,7 +120,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010341406, y: 0.0051710606}
+  m_Offset: {x: -0.0034585, y: -0.0034322739}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -131,7 +131,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.80696154, y: 0.81731653}
+  m_Size: {x: 0.7106018, y: 0.7106323}
   m_EdgeRadius: 0
 --- !u!114 &-8623897355266959861
 MonoBehaviour:
@@ -146,6 +146,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallTime: 1
+  fallSfx:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  playSfx: 0
 --- !u!114 &231437894879805575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,3 +183,5 @@ MonoBehaviour:
   amplitude: 3
   timeCounter: 0
   pivot: {x: 0, y: 0, z: 0}
+  yMove: 0
+  completion: 0
