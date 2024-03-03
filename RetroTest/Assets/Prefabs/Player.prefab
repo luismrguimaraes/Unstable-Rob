@@ -6285,6 +6285,13 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   charJump: {fileID: 772289788503652291}
+  grabSFX:
+    Guid:
+      Data1: 1403957362
+      Data2: 1170064035
+      Data3: -458207838
+      Data4: 1478792744
+    Path: event:/Grab
   y_offset: -0.75
   isGrabbing: 0
   grabCoyote: 0.25
@@ -16868,10 +16875,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2101075223272443430, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 2101075223272443430, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -16895,6 +16898,10 @@ PrefabInstance:
       propertyPath: playerEventData.player
       value: 
       objectReference: {fileID: 8829671123831029809}
+    - target: {fileID: 4361398783993457098, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
+      propertyPath: playerEventData.UIcamera
+      value: 
+      objectReference: {fileID: 6266357064157699123}
     - target: {fileID: 4361398783993457098, guid: 6cacb1f5eac38aa449bd99900d6024ea, type: 3}
       propertyPath: playerEventData.darkness
       value: 

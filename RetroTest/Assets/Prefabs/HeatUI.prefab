@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5759907637118397564}
   - component: {fileID: 8625149643374523297}
   - component: {fileID: 2800649884145062672}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: StripLast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 5626247102558691025}
   - component: {fileID: 7761970206476958100}
   - component: {fileID: 6903988802985253442}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Heat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 1175153433345688025}
   - component: {fileID: 7471631326421632813}
   - component: {fileID: 539623356625207786}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: StripMed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 4361398783993457098}
   m_Layer: 5
   m_Name: HeatUI
-  m_TagString: Untagged
+  m_TagString: HeatUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,7 +257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -0.05}
+  m_AnchoredPosition: {x: 0, y: 0.92}
   m_SizeDelta: {x: 857.46, y: 553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2773898079192368654
@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 3826628120678809899}
   - component: {fileID: 3601571827522914264}
   - component: {fileID: 2749024964307943381}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Strips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8809234653095676101}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 5842832471389176234}
   - component: {fileID: 5215967093862749608}
   - component: {fileID: 4896010649978609211}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}

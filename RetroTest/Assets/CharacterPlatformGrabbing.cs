@@ -8,6 +8,7 @@ public class CharacterPlatformGrabbing : MonoBehaviour
     public InputAction grabAction;
     public InputAction jumpAction;
     public characterJump charJump;
+    public FMODUnity.EventReference grabSFX;
     public float y_offset = -0.2f;
     public bool isGrabbing;
     private int touchingPlatforms;
@@ -35,6 +36,9 @@ public class CharacterPlatformGrabbing : MonoBehaviour
         {
             if (touchingPlatforms>0){
                 isGrabbing = true;
+
+                // Play SFX
+                FMODUnity.RuntimeManager.CreateInstance(grabSFX).start();
             }
         }else{
             if (grabAction.WasReleasedThisFrame() || jumpAction.WasPressedThisFrame()){

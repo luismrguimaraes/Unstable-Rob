@@ -99,6 +99,7 @@
 			<destination>{c395b53c-66df-4afd-9751-68e7dc622d42}</destination>
 			<destination>{34b3298b-0bd6-4215-bf43-90f0112b0ec1}</destination>
 			<destination>{67ce8a8f-b84a-47cc-9820-46547af77529}</destination>
+			<destination>{19c2435a-63c3-45fb-98fa-ec41227c3b56}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{aad6747c-c9a8-46bb-b3c4-0df84c8903d7}" />
@@ -129,6 +130,14 @@
 		<property name="highGain">
 			<value>-2.5</value>
 		</property>
+	</object>
+	<object class="ProxyEffect" id="{19c2435a-63c3-45fb-98fa-ec41227c3b56}">
+		<property name="inputFormat">
+			<value>0</value>
+		</property>
+		<relationship name="preset">
+			<destination>{3491bcfa-219b-4ab1-8c05-24463a997bff}</destination>
+		</relationship>
 	</object>
 	<object class="AutomationPoint" id="{73abacc9-4070-4c4c-a1d6-5c45bf388bd3}">
 		<property name="position">
