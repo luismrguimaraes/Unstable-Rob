@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1193986390434717429}
   - component: {fileID: 1230199223542477349}
   - component: {fileID: 4968464407126539884}
-  - component: {fileID: 4275538488315019912}
+  - component: {fileID: 8780402174954193716}
   m_Layer: 0
   m_Name: Water Cooler
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 26.7, y: -3.95, z: 0}
-  m_LocalScale: {x: 2.66, y: 2.66, z: 2.66}
+  m_LocalScale: {x: 0.46, y: 0.46000004, z: 0.46000004}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
+  m_Sprite: {fileID: 1922175247, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
   m_Color: {r: 0.3726415, g: 0.449944, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,10 +101,30 @@ MonoBehaviour:
   Player:
     serializedVersion: 2
     m_Bits: 64
-  triggerCollider: {fileID: 4275538488315019912}
-  waterRemaining: 10
+  triggerCollider: {fileID: 8780402174954193716}
+  waterPercentage: 50
+  waterTankSprites:
+  - {fileID: 1922175247, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: 737806429, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: -1703690721, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: 1707338194, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: 732837180, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: -837258409, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: 1477980059, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: -902288840, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: 1158958523, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: -2077248012, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: -1101535202, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: 1654776997, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: -1346321464, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: -2028148055, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: 960952833, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: 362517206, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: -543217877, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: -1521534514, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
+  - {fileID: -1397797871, guid: 95dc65c39e8c84b48ba6b1531e3fad76, type: 3}
   infiniteWater: 0
---- !u!61 &4275538488315019912
+--- !u!61 &8780402174954193716
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,16 +156,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 3.385, y: -4.5161047}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.5}
+    pivot: {x: 0, y: 1}
+    oldSize: {x: 6.77, y: 9.032206}
     newSize: {x: 1, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 6.77, y: 9.032206}
   m_EdgeRadius: 0
