@@ -142,7 +142,7 @@ namespace GMTK.PlatformerToolkit {
         }
 
         // Function that when called, replicates a automatic mid air dash upwards
-        public void AirDash(float forceMultiplier) {            
+        public void AirDash(float forceMultiplier, FMODUnity.EventReference airDashSfx) {            
             
 
             // Pick random interval from 0.3 - 1 seconds
@@ -152,20 +152,20 @@ namespace GMTK.PlatformerToolkit {
 
             // Delay of randomInterval
             Debug.Log("Waiting for " + randomInterval + " seconds before AirDashing");
-            StartCoroutine(AirDashImpulse(randomInterval, randomForceFactor));
-
-
-
+            StartCoroutine(AirDashImpulse(randomInterval, randomForceFactor, airDashSfx));
             
         }
 
         // Function that adds a force to the character's rigidbody
-        System.Collections.IEnumerator AirDashImpulse(float randomInterval, float randomForceFactor) {
+        System.Collections.IEnumerator AirDashImpulse(float randomInterval, float randomForceFactor, FMODUnity.EventReference airDashSfx) {
             
             yield return new WaitForSeconds(randomInterval);
             //float randomForceFactor = Random.Range(50f, 70f);
             Debug.Log("AirDash with intensity: " + randomForceFactor);
             body.AddForce(new Vector2(0, randomForceFactor), ForceMode2D.Impulse);
+
+            // Play sfx
+            FMODUnity.RuntimeManager.CreateInstance(airDashSfx).start();
         }
         
         public void invertControlsEvent() {

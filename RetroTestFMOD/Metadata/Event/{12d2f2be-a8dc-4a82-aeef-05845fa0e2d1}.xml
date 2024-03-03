@@ -76,7 +76,7 @@
 	</object>
 	<object class="SingleSound" id="{572a78ba-ac0c-450b-beb3-9c647d2daab7}">
 		<property name="length">
-			<value>1.0625</value>
+			<value>1.15625</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{6f95e1cd-e636-4342-89c9-c21ec107f2ba}</destination>
@@ -132,7 +132,7 @@
 	</object>
 	<object class="AutomationPoint" id="{73abacc9-4070-4c4c-a1d6-5c45bf388bd3}">
 		<property name="position">
-			<value>0.50409297052154201</value>
+			<value>0.875</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -143,7 +143,7 @@
 	</object>
 	<object class="AutomationPoint" id="{0de87ba3-eee6-441c-b997-5d2bade5d7d0}">
 		<property name="position">
-			<value>1.0625</value>
+			<value>1.15625</value>
 		</property>
 		<property name="value">
 			<value>0</value>

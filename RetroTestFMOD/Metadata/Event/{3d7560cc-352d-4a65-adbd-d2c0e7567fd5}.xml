@@ -79,7 +79,7 @@
 	</object>
 	<object class="SingleSound" id="{a211befd-eb17-4926-a1ac-41bf254e1168}">
 		<property name="length">
-			<value>0.015625</value>
+			<value>0.013671875</value>
 		</property>
 		<property name="pitch">
 			<value>-4</value>
@@ -136,12 +136,12 @@
 	<object class="MixerBusFader" id="{7639adf5-a65f-4de1-9d4a-ed748cea1351}" />
 	<object class="MultibandEqEffect" id="{9909b6d1-9264-4a17-b5d3-10cbd288c839}">
 		<property name="frequencyA">
-			<value>2000</value>
+			<value>1200</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{25c40888-b8b6-49f8-908d-18f90adb31e3}">
 		<property name="position">
-			<value>0.01220703125</value>
+			<value>0.00732421875</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -152,7 +152,7 @@
 	</object>
 	<object class="AutomationPoint" id="{dd378e8d-5ac8-4acf-b725-5aa4f2b9cd08}">
 		<property name="position">
-			<value>0.015625</value>
+			<value>0.013671875</value>
 		</property>
 		<property name="value">
 			<value>0</value>
