@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -470.583, y: 28.416992}
-  m_SizeDelta: {x: 56.834, y: 56.834}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2582256217343810301
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0ad1083e57c20e240a80d8317131646b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -93,7 +93,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 150dba8974f7f694abea556dcc022c85, type: 3}
   - {fileID: 21300000, guid: 0ad1083e57c20e240a80d8317131646b, type: 3}
   - {fileID: 21300000, guid: db115d187d083d6489f27cae84f0651d, type: 3}
-  - {fileID: 21300000, guid: dc83337cf1c4e4918b4a6561b0059036, type: 3}
+  - {fileID: 21300000, guid: 9fbd91c770862314caa63c6bf546a748, type: 3}
   events:
   - Darkness
   - FlipCamera

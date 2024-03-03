@@ -128,8 +128,10 @@ namespace GMTK.PlatformerToolkit {
             myAnimator.SetTrigger("Jump");
 
             if (!jumpSFX.IsNull){
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("IsJumping", 1f); 
                 FMOD.Studio.EventInstance jumpSFXInstance = FMODUnity.RuntimeManager.CreateInstance(jumpSFX);
                 jumpSFXInstance.start();
+                
             }
 
             if (!jumpSqueezing && jumpSqueezeMultiplier > 1) {

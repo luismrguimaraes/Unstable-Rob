@@ -14,10 +14,12 @@ public class MovingPlatform : MonoBehaviour
     public Vector3 pivot;
     private Transform previousPlayerParent;
     public bool yMove;
+    public float completion;
     // Start is called before the first frame update
     void Start()
     {
         pivot = transform.position;
+        timeCounter = completion / rate;
     }
 
     // Update is called once per frame

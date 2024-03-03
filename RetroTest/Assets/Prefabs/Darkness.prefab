@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 7172553166085254892}
   - component: {fileID: 6674863019777392781}
   - component: {fileID: 123957874278008786}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Darkness
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5100121297957913960
 RectTransform:
   m_ObjectHideFlags: 0
@@ -40,7 +40,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.07989502, y: -0.010009766}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 32.3137, y: 14.2621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7172553166085254892
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &123957874278008786
 MonoBehaviour:
   m_ObjectHideFlags: 0
