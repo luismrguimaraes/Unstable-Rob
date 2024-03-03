@@ -99,13 +99,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fda17945b164c5f85b3b3058439a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  charMove: {fileID: 0}
   Player:
     serializedVersion: 2
     m_Bits: 64
   triggerCollider: {fileID: 594977847400443817}
   respawnTime: 0.5
   cooldown: 0
+  targetOrtoSize: 13.5
   forceMultiplier: 1
+  airDashSfx:
+    Guid:
+      Data1: 315814590
+      Data2: 1250076892
+      Data3: -2079985746
+      Data4: -773676961
+    Path: event:/AirDash
 --- !u!95 &2096498749956855359
 Animator:
   serializedVersion: 5
