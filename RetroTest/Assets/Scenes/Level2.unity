@@ -15165,6 +15165,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a74adbb51a9cfe4ab3bbc180d472c69, type: 3}
+--- !u!114 &632333629 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7356018048622591725, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+  m_PrefabInstance: {fileID: 1281360950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &634280640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15914,6 +15925,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AirDash Coin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4521735608274248968, guid: 03438d1ff95c721449f4b82eed6cc55b, type: 3}
+      propertyPath: charMove
+      value: 
+      objectReference: {fileID: 1072700609}
+    - target: {fileID: 4521735608274248968, guid: 03438d1ff95c721449f4b82eed6cc55b, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 632333629}
     - target: {fileID: 5819867703520273110, guid: 03438d1ff95c721449f4b82eed6cc55b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 173.02
@@ -21288,6 +21307,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AirDash Coin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4521735608274248968, guid: 03438d1ff95c721449f4b82eed6cc55b, type: 3}
+      propertyPath: charMove
+      value: 
+      objectReference: {fileID: 1072700609}
+    - target: {fileID: 4521735608274248968, guid: 03438d1ff95c721449f4b82eed6cc55b, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 632333629}
     - target: {fileID: 5819867703520273110, guid: 03438d1ff95c721449f4b82eed6cc55b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 173.02
@@ -26590,6 +26617,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8829671123831029809, guid: d268379a1a7544736a572440247f3b0c, type: 3}
   m_PrefabInstance: {fileID: 1281360950}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1072700609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4207326000876937660, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+  m_PrefabInstance: {fileID: 1281360950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072700600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d9fcc1289b79458d9a4ac5c7cbbb62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1075302736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31321,6 +31359,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3355592375984407969, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+      propertyPath: orthographic size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3388242375037391730, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -31340,6 +31382,10 @@ PrefabInstance:
     - target: {fileID: 5382592693294436940, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.219999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5382592693294436940, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8299999
       objectReference: {fileID: 0}
     - target: {fileID: 6266357064157699123, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_Enabled
@@ -31408,6 +31454,14 @@ PrefabInstance:
     - target: {fileID: 9196117927542730768, guid: d268379a1a7544736a572440247f3b0c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.219999
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196117927542730768, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8299999
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196117927542730768, guid: d268379a1a7544736a572440247f3b0c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -47496,6 +47550,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AirDash Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 4521735608274248968, guid: 03438d1ff95c721449f4b82eed6cc55b, type: 3}
+      propertyPath: charMove
+      value: 
+      objectReference: {fileID: 1072700609}
+    - target: {fileID: 4521735608274248968, guid: 03438d1ff95c721449f4b82eed6cc55b, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 632333629}
     - target: {fileID: 5819867703520273110, guid: 03438d1ff95c721449f4b82eed6cc55b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 173.02
